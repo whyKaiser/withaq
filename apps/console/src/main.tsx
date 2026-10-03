@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 import { EngineConsole } from "./EngineConsole";
@@ -71,12 +71,19 @@ function App() {
   const [disclosure, setDisclosure] = useState<Disclosure | null>(null);
   const [notice, setNotice] = useState("");
   const [english, setEnglish] = useState(false);
+  const [publicDemo, setPublicDemo] = useState<{source_commit: string; session_minutes: number} | null>(null);
+  useEffect(() => {
+    void fetch("/demo/config").then(async response => {
+      if (response.ok) setPublicDemo(await response.json());
+    }).catch(() => {});
+  }, []);
   const t = (ar: string, en: string) => (english ? en : ar);
   async function api(path: string, body?: unknown) {
     const response = await fetch(path, {
       method: body === undefined ? "GET" : "POST",
       headers: {
         Authorization: `Bearer ${token}`,
+        "X-Withaq-Demo": "1",
         ...(body === undefined
           ? {}
           : {
@@ -197,9 +204,16 @@ function App() {
       </section>
       {!scenarios.length ? (
         <section className="panel login">
-          <p className="eyebrow">LOCAL DEVELOPMENT</p>
+          <p className="eyebrow">{publicDemo ? "JUDGE DEMONSTRATION" : "LOCAL DEVELOPMENT"}</p>
           <h2>{t("الدخول إلى المختبر", "Enter the lab")}</h2>
-          <p>
+          {publicDemo ? <>
+            <p>{t("ابدأ تجربة منفصلة لك دون تثبيت أو حساب. جرّب الاحتواء وسحب المصادر والاستعادة وفحص الإفصاح. استخدم بيانات اصطناعية فقط.", "Start your isolated experiment without installing software or creating an account. Try containment, revocation, recovery and disclosure using synthetic data only.")}</p>
+            <p>{t(`الجلسة مؤقتة لمدة ${publicDemo.session_minutes} دقيقة. التطبيق هنا محاكاة؛ أدلة قياس الحزم الفعلي متاحة في GitHub.`, `The temporary session lasts ${publicDemo.session_minutes} minutes. Application here is simulated; actual packet evidence is available on GitHub.`)}</p>
+            <button disabled={busy} onClick={() => void act(async () => {
+              await api("/demo/session", {});
+              setScenarios(await api("/v1/scenarios"));
+            })}>{t("ابدأ تجربة وثاق", "Try WITHAQ")}</button>
+          </> : <><p>
             {t(
               "انسخ رمز التشغيل من data/local-access.txt. يبقى الرمز في ذاكرة هذه الصفحة فقط.",
               "Copy the operator token from data/local-access.txt. It stays only in this page’s memory.",
@@ -226,9 +240,16 @@ function App() {
               <button disabled={busy || !token}>{t("دخول", "Enter")}</button>
             </div>
           </form>
+          </>}
         </section>
       ) : (
         <>
+          {publicDemo && <section className="panel public-demo-note">
+            <strong>{t("تجربتك الخاصة · بيانات اصطناعية · تطبيق محاكى", "Your isolated experiment · synthetic data · simulated application")}</strong>
+            <p>{t("ابدأ بزر «إنشاء تجربة كاملة»، ثم جرّب الخطة والسحب والاستعادة والإفصاح. تنتهي الجلسة تلقائيًا؛ تحديث الموقع يمسح التجارب المؤقتة.", "Start with Create full experiment, then try planning, revocation, recovery and disclosure. Sessions expire automatically; deployments reset temporary experiments.")}</p>
+            <small>{t("نسخة المصدر", "Source version")}: <a href={`https://github.com/whyKaiser/withaq/commit/${publicDemo.source_commit}`} target="_blank" rel="noreferrer">{publicDemo.source_commit.slice(0,8)}</a></small>
+            <button className="quiet" onClick={() => window.location.reload()}>{t("العودة إلى البداية", "Return to start")}</button>
+          </section>}
           <EngineConsole token={token} english={english} />
           <div className="sandbox-heading">
             <p className="eyebrow">FINITE MODEL EXPLORER</p>

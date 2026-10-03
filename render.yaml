@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: withaq-demo
+    runtime: docker
+    plan: free
+    region: frankfurt
+    repo: https://github.com/whyKaiser/withaq
+    branch: main
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    autoDeployTrigger: commit
+    healthCheckPath: /health/ready
+    envVars:
+      - key: WITHAQ_DEMO_MAX_SESSIONS
+        value: "8"

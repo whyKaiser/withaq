@@ -7,6 +7,7 @@
 **Engineering lab, synthetic devices and data.** PostgreSQL is authoritative in the qualified setup. The content provider and external dispatch adapter are mock: no paid key or external data transmission. Real TCP/nftables measurements run in disposable containers and bind to the selected plan. They do not establish production IoT coverage or persistent protection after a trial ends.
 
 - [Judges: run the complete demonstration](docs/JUDGES.md)
+- [Public demo deployment and automatic updates](docs/DEPLOYMENT.md)
 - [Poster-to-code traceability and limits](docs/POSTER-TRACEABILITY.md)
 - [Raw verification evidence](docs/evidence/README.md)
 - [Team vault](vault/00-START-HERE.md) · [Current status](vault/02-STATUS.md)

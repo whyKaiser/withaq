@@ -14,19 +14,11 @@ from .schema import workspace
 
 
 def migrate(url):
-    import os
-    previous = os.environ.get("WITHAQ_DATABASE_URL")
-    os.environ["WITHAQ_DATABASE_URL"] = url
-    try:
-        root = Path(__file__).resolve().parents[2]
-        config = Config(str(root / "alembic.ini"))
-        config.set_main_option("script_location", str(root / "migrations"))
-        command.upgrade(config, "head")
-    finally:
-        if previous is None:
-            os.environ.pop("WITHAQ_DATABASE_URL", None)
-        else:
-            os.environ["WITHAQ_DATABASE_URL"] = previous
+    root = Path(__file__).resolve().parents[2]
+    config = Config(str(root / "alembic.ini"))
+    config.set_main_option("script_location", str(root / "migrations"))
+    config.attributes["database_url"] = url
+    command.upgrade(config, "head")
 
 
 class Database:
