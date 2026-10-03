@@ -14,4 +14,4 @@ npm.cmd --prefix apps/console run build
 if ($LASTEXITCODE -ne 0) { throw 'Frontend build failed' }
 & .\.venv\Scripts\python.exe -m pytest
 if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
-Write-Output 'Ready: .\.venv\Scripts\python.exe scripts/serve.py'
+Write-Output 'Ready: .\.venv\Scripts\python.exe scripts/lab.py (see README for PostgreSQL/packet mode)'

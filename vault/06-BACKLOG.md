@@ -1,33 +1,33 @@
-# Backlog واحد للفريق
+# Backlog واحد للفريق — 3 أكتوبر 2026
 
-آخر تحديث: 3 أكتوبر 2026. `BASELINE` = أساس محاكى منفذ في هذا الإصدار؛ راجع HANDOFF للاختبارات. أصحاب المهام البشرية غير مسندين حتى يختار الفريق. التقدير نسبي 1/2/3/5/8 نقاط، وليس ساعات مضمونة.
+المالك البشري يختاره الفريق. REVIEW يعني تنفيذًا وفحوصات محلية دون مراجعة مستقلة أو تشغيل عضو آخر. PARTIAL يعني جزءًا محددًا منفذًا مع شروط خروج متبقية. لا velocity أو مساهمات بشرية مخترعة.
 
-| ID | المهمة ومعيار القبول | أولوية | نقاط | اعتماد | Sprint | حالة | مالك |
-|---|---|---|---:|---|---|---|---|
-| WQ-001 | Repo عام + vault وروابط السياق | P0 | 2 | — | S01 | BASELINE | إعداد أولي بمساعدة Codex |
-| WQ-002 | locks وbootstrap وCI من clone نظيف | P0 | 3 | 001 | S01 | REVIEW | إعداد أولي بمساعدة Codex |
-| WQ-003 | MFSC وحالات البحث الأربع والمثال 3/16 | P0 | 3 | 002 | S01 | BASELINE | إعداد أولي بمساعدة Codex |
-| WQ-004 | validator مستقل يرفض stale/unsafe | P0 | 3 | 003 | S01 | BASELINE | مراجعة بشرية غير مسندة |
-| WQ-005 | SQLite fixture barriers وT3 وT2b | P0 | 3 | 004 | S01 | BASELINE | إعداد أولي بمساعدة Codex |
-| WQ-006 | approval exact bytes وunknown-send mock | P0 | 3 | 005 | S01 | BASELINE | إعداد أولي بمساعدة Codex |
-| WQ-007 | Console ثنائية اللغة ورحلة الحكام | P0 | 5 | 003–006 | S01 | REVIEW | إعداد أولي بمساعدة Codex |
-| WQ-008 | PostgreSQL/Alembic ونسخ/قيود الجداول | P0 | 8 | 002 | S02 | READY | غير مسند |
-| WQ-009 | lineage عام، root closure، رفض cycles | P0 | 5 | 008 | S02 | READY | غير مسند |
-| WQ-010 | APIs للعقود/الأجهزة/المصادر مع صلاحيات | P1 | 5 | 008 | S02 | READY | غير مسند |
-| WQ-011 | outbox، lease، fencing، crash recovery | P0 | 8 | 008 | S03 | READY | غير مسند |
-| WQ-012 | races للسحب/القراءة/النشر بين عمليتين | P0 | 5 | 009،011 | S03 | READY | غير مسند |
-| WQ-013 | فصل validator وgateway بهويات مقيدة | P0 | 5 | 011 | S03 | READY | غير مسند |
-| WQ-014 | corpus إفصاح عربي/إنجليزي وsanitization | P1 | 5 | 006 | S03 | READY | غير مسند |
-| WQ-015 | تكامل UI مع APIs العامة ومعالجة 403/409 | P0 | 5 | 010،013 | S04 | READY | غير مسند |
-| WQ-016 | اختبارات متصفح آلية لرحلة كاملة | P0 | 3 | 007 | S04 | READY | غير مسند |
-| WQ-017 | نتائج مقارنة خام مع commit/seeds | P1 | 5 | 003،012 | S04 | READY | غير مسند |
-| WQ-018 | VM معزولة وPEP/nftables مع no bypass | P1 | 8 | 004 | لاحق/حسب السعة | READY | غير مسند |
-| WQ-019 | probes للـnew/established flows والعقود | P1 | 8 | 018 | لاحق/حسب السعة | READY | غير مسند |
-| WQ-020 | backup/restore يعيد barrier والأدلة | P0 | 5 | 008،011 | S04 | READY | غير مسند |
-| WQ-021 | تشغيل مستقل من عضو آخر وتسجيل العرض | P0 | 3 | 015،016 | S05 | READY | غير مسند |
-| WQ-022 | Release مرقّم وحدود واضحة ودليل الحكام | P0 | 2 | 021 | S05 | READY | غير مسند |
-| WQ-023 | حسابات الستة وقرار الأدوار والرخصة | P1 | 1 | — | S01 | WAITING_TEAM | الفريق |
+| ID | المهمة | أولوية | نقاط | Sprint المخطط | الحالة 0.2 | المتبقي |
+|---|---|---|---:|---|---|---|
+| WQ-001 | Repo عام + vault | P0 | 2 | S01 | REVIEW | مراجعة عضو |
+| WQ-002 | locks/bootstrap/CI | P0 | 3 | S01 | PARTIAL | OAuth workflow + تشغيل عضو ثانٍ |
+| WQ-003 | MFSC وحالات البحث وoracle | P0 | 3 | S01 | REVIEW | مراجعة مستقلة للمنطق |
+| WQ-004 | validator مستقل | P0 | 3 | S01 | REVIEW | توسيع corpus وتعقيب مراجع |
+| WQ-005 | fixture barriers | P0 | 3 | S01 | REVIEW | تاريخي؛ المحرك العام في 009 |
+| WQ-006 | exact approval وunknown mock | P0 | 3 | S01 | REVIEW | مزود حقيقي خارج نطاق العرض الحالي |
+| WQ-007 | Console ثنائية اللغة | P0 | 5 | S01 | REVIEW | usability/reproduction مستقل |
+| WQ-008 | PostgreSQL/Alembic | P0 | 8 | S02 | REVIEW | قيود/أدوار نشر مؤسسية؛ ADR-007 |
+| WQ-009 | lineage عام وcycles/closure | P0 | 5 | S02 | REVIEW | object storage وتصنيف دفعات المصادر |
+| WQ-010 | APIs للعقود/الأجهزة/المصادر | P1 | 5 | S02 | PARTIAL | lifecycle/owner/AND/OR وإسناد الحوادث للدفعات |
+| WQ-011 | outbox/lease/fencing/restart | P0 | 8 | S03 | REVIEW | limits/operations طويلة المدة |
+| WQ-012 | races بين عمليتين | P0 | 5 | S03 | REVIEW | ضغط موسع ومراجعة البروتوكول |
+| WQ-013 | فصل الخدمات وهويات مقيدة | P0 | 5 | S03 | PARTIAL | فصل صلاحيات الشبكة ومنع worker egress في النشر |
+| WQ-014 | إفصاح عربي/إنجليزي وsanitization | P1 | 5 | S03 | PARTIAL | corpus أوسع؛ لا DLP عام |
+| WQ-015 | تكامل UI مع APIs العامة | P0 | 5 | S04 | REVIEW | نموذج إدارة عقود عام وتعدد مدخلات في الشاشة |
+| WQ-016 | اختبارات متصفح آلية | P0 | 3 | S04 | READY | فحص يدوي منفذ؛ suite آلية متبقية |
+| WQ-017 | نتائج مقارنة خام | P1 | 5 | S04 | REVIEW | 300 إعداد model-only؛ مراجعة المنهجية |
+| WQ-018 | PEP/nftables مختبر معزول | P1 | 8 | S04/لاحق | PARTIAL | حاوية مؤقتة ناجحة؛ VM/PEP دائم متبقٍ |
+| WQ-019 | probes new/established/function | P1 | 8 | S04/لاحق | PARTIAL | G/X/P/M/A مقاس؛ topologies/faults إضافية |
+| WQ-020 | restore/barrier/outbox | P0 | 5 | S04 | PARTIAL | pg_restore مؤهل؛ ledger replication/freshness مؤسسي متبقٍ |
+| WQ-021 | تشغيل عضو ثانٍ وتسجيل عرض | P0 | 3 | S05 | READY | يحتاج عضوًا فعليًا؛ غير منفذ بمساعدة Codex |
+| WQ-022 | Release ودليل حكام | P0 | 2 | S05 | REVIEW | إصدار مختبر؛ human review قبل final qualification |
+| WQ-023 | حسابات/أدوار/رخصة | P1 | 1 | S01 | WAITING_TEAM | اختيار بشري؛ الأسماء مثبتة في TEAM |
 
-لا توجد Issues أو Milestones خارجية منشأة تلقائيًا؛ الخطة الملتزم بها الآن هي هذه الملفات الموجودة في كل clone. أضف رابط PR/commit في بطاقة المهمة عند إنشائه. لا تطلب من الأعضاء البدء ببطاقات تعتمد على متطلبات غير منجزة.
+الترتيب المنجز تقنيًا سبق تواريخ S02–S04 المخططة. هذا لا يدعي انعقاد Sprint review أو مساهمات/ساعات بشرية. اعتماديات التنفيذ: 008 قبل 009/011؛ 009/011 قبل 012/013؛ 015 قبل 021.
 
-عائق WQ-002: تفعيل GitHub Actions يحتاج صلاحية workflow غير المتاحة للاتصال الحالي. قالب الإعداد محفوظ في docs/ci؛ فحوصات Python وfrontend نُفذت محليًا.
+OAuth الحالي لا يستطيع إنشاء GitHub Actions workflows؛ القالب محفوظ في `docs/ci`. ليس عائقًا لبناء المشروع أو نشر مصدره وأدلته.

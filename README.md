@@ -1,72 +1,70 @@
 # WITHAQ | وثاق
 
-**Function-aware containment, governed disclosure, and source revocation with recovery.**
+**Function-safe containment, governed disclosure, revocation and independent recovery.**
 
-نموذج تجريبي لفريق وثاق في مسابقة سيف 2026. يتضمن محرك احتواء محدودًا، متحققًا مستقلًا، محاكاة سحب صلاحية البيانات وإعادة البناء، وبوابة إفصاح محاكية مع لوحة عربية/إنجليزية.
+وثاق مشروع فريق سعودي من ستة خريجين لمسابقة سيف 2026. نسخة **0.2.0** تشغّل رحلة مختبر كاملة: خطة ومتحقق مستقل، تطبيق مع قياسات حزم داخل مختبر معزول، مصادر ومخرجات عامة، سحب أثناء التوليد، استعادة بهوية جديدة، وفحص إفصاح واعتماد دقيق.
 
-**Current release: local simulation, synthetic data only.** No real network rules are installed and no external AI service receives data. This repository does **not** yet implement the entire 62-page engineering blueprint. See the [verified status](vault/02-STATUS.md) and [acceptance mapping](docs/acceptance.md).
+**Engineering lab, synthetic devices and data.** PostgreSQL is authoritative in the qualified setup. The content provider and external dispatch adapter are mock: no paid key or external data transmission. Real TCP/nftables measurements run in disposable containers and bind to the selected plan. They do not establish production IoT coverage or persistent protection after a trial ends.
 
-- **Team starting point:** [vault/00-START-HERE.md](vault/00-START-HERE.md)
-- **Judges:** [five-minute demonstration](docs/JUDGES.md)
-- **Plan through 8 October 2026:** [sprints](vault/sprints/README.md) · [phases](vault/05-PHASES.md)
-- **Design sources:** [Arabic](vault/references/WITHAQ_Complete_Build_Operations_AR.pdf) · [English](vault/references/WITHAQ_Complete_Build_Operations_EN.pdf)
-- **Submitted poster:** [PDF](docs/WITHAQ_SAIF_2026_Poster_SUBMISSION.pdf)
+- [Judges: run the complete demonstration](docs/JUDGES.md)
+- [Poster-to-code traceability and limits](docs/POSTER-TRACEABILITY.md)
+- [Raw verification evidence](docs/evidence/README.md)
+- [Team vault](vault/00-START-HERE.md) · [Current status](vault/02-STATUS.md)
+- [Sprints](vault/sprints/README.md) · [Phases](vault/05-PHASES.md)
+- [Arabic engineering guide](vault/references/WITHAQ_Complete_Build_Operations_AR.pdf) · [English guide](vault/references/WITHAQ_Complete_Build_Operations_EN.pdf)
+- [Submitted poster](docs/WITHAQ_SAIF_2026_Poster_SUBMISSION.pdf)
 
-## Run locally
+## Start on Windows
 
-Requirements: Python 3.12+ and a Node version supported by Vite 8 (Node 22.12+ or a compatible newer version). Use Node 24 LTS for the team baseline. No API key, GPU, physical device, Docker, or paid subscription is required for this simulation.
-
-### Windows PowerShell
+Python 3.12+, compatible Node 22.12+ (team recommendation: Node 24 LTS). Docker Desktop is required for PostgreSQL and isolated packet trials; the fallback runs without Docker.
 
 ```powershell
 git clone https://github.com/whyKaiser/withaq.git
 cd withaq
 powershell -File scripts/bootstrap.ps1
-.\.venv\Scripts\python.exe scripts/serve.py
+.\.venv\Scripts\python.exe scripts/init_lab.py
+docker compose -f compose.dev.yml up -d --wait db
+.\.venv\Scripts\python.exe scripts/lab.py --postgres --packets
 ```
 
-### Linux / macOS
+Open **http://127.0.0.1:8000**. Copy the generated token from `data/local-access.txt`. It stays in page memory. `data/local-credentials.json` contains a read-only viewer token and separate service credentials; never publish `data/`.
 
-```bash
-git clone https://github.com/whyKaiser/withaq.git
-cd withaq
-bash scripts/bootstrap.sh
-.venv/bin/python scripts/serve.py
-```
+Linux/macOS: use `bash scripts/bootstrap.sh`, replace the Python executable with `.venv/bin/python`, and use the same Docker/launcher commands. This release was verified on Windows with Docker's Linux engine; independent Linux/macOS bootstrap remains a team check.
 
-Open **http://127.0.0.1:8000**. Copy the local operator token from `data/local-access.txt` into the login field. It is generated on your computer, never committed, and retained only in browser memory. A read-only viewer token is in `data/local-credentials.json`. Bind only to loopback; this local development identity scheme is not a public deployment identity system.
+Without Docker: `.venv\Scripts\python.exe scripts/lab.py` starts four services with SQLite and simulated enforcement. `scripts/serve.py` is a compatibility alias. The packet adapter is unavailable in this mode.
 
-First-time bootstrap downloads dependencies. After installation, the demo runs without an external model or font service. GitHub links need internet access. Stop using Ctrl+C; restart preserves the SQLite demo state. Do not publish the `data` directory.
+Ctrl+C stops the child services. PostgreSQL remains running; stop it with `docker compose -f compose.dev.yml stop`. Avoid `down -v`: it removes the database volume. Restarting preserves roots, barriers, jobs and audit records. An expired admitted send becomes `OUTCOME_UNKNOWN`, never an automatic resend.
 
-## What works now
+## Implemented
 
-1. Six deterministic scenarios: separable containment, inseparable critical channel, bounded extra dependency, incomplete evidence, late alert, and unavailable enforcement action.
-2. Bounded exhaustive MFSC search with explicit `OPTIMAL`, `FEASIBLE`, `INFEASIBLE`, `UNKNOWN` outcomes. Minimum is relative to the declared finite model, not a global theorem.
-3. Independent validator using transitive closure, rechecking versions, action support, reachability and each critical contract. Full quarantine and single-path blocking are comparison candidates; rejected candidates cannot be applied.
-4. Persistent synthetic S1/S2/S3 and T1/T2/T3/C-D fixture. Revocation blocks new dependent reads and late publication admission, preserves the independent branch, and allows a new T2b from S2.
-5. Disclosure inspection, exact-request approval, current-root recheck, and simulated sent/unknown outcomes without blind retries.
-6. Arabic/English console, JSON evidence export, local role checks, transactional version checks and idempotency.
+- Bounded MFSC search, up to 12 actions, four solver outcomes and a separately running independent validator. The 16-subset example has exactly three feasible subsets and selects `{a,b}`.
+- PostgreSQL/SQLAlchemy with three real Alembic migrations; transactional versions and idempotency, roles, atomic revoke/outbox, leased jobs, heartbeats and fencing.
+- General immutable artifacts, transitive root closure, acyclic lineage, complete source/system/history/tool manifests, guards at read and publication, new-identity independent recovery.
+- Arabic/English deterministic disclosure corpus; `ALLOW`, `SANITIZE`, `BLOCK`, `REQUIRE_APPROVAL`. Sanitization preserves lineage and reinspects exact bytes. Approval binds bytes, destination, account, purpose, policy, roots and expiry.
+- Separate HTTP-only worker and gateway without DB credentials. Frozen `ADMITTED` precedes the mock adapter; lost outcomes prevent blind retry.
+- Optional packet broker: G/X/P/M/A synthetic endpoints, nftables denies before established-flow acceptance, new/existing TCP tests, individual monitor/alert observations. Signed receipts are independently checked by the API. Packet support is deliberately limited to this mapped topology.
+- A 300-setting **model-only** comparison with seeds, complete snapshots, invalid/unknown outcomes and raw results. Baselines are explicit project heuristics, not commercial product evaluations.
+- An executed PostgreSQL restore qualification using an old backup plus a newer authenticated revocation ledger before job resume.
 
-## Verification
+## Verify
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest
-.\.venv\Scripts\python.exe scripts/export_evidence.py
+.\.venv\Scripts\python.exe scripts/verify_postgres.py
 npm.cmd --prefix apps/console run build
+.\.venv\Scripts\python.exe scripts/packet_lab.py
+.\.venv\Scripts\python.exe scripts/benchmark.py
+.\.venv\Scripts\python.exe scripts/restore_qualification.py
 ```
 
-Equivalent Python commands use `.venv/bin/python` on Linux/macOS. Generated evidence is written to `artifacts/` and is not committed automatically. Committed sample evidence contains synthetic values only.
+Generated results stay in ignored `artifacts/`. Public evidence is intentionally selected from synthetic trials. Read its source commit and working-tree marker; do not treat old 0.1 evidence as proof of new features.
 
-GitHub Actions is **not active yet**: the current GitHub connection lacks the `workflow` scope. The ready-to-enable configuration is [docs/ci/github-actions.yml](docs/ci/github-actions.yml); an authorized maintainer can copy it to `.github/workflows/ci.yml`. Local test results must not be described as a successful GitHub Actions run.
+GitHub Actions is **not active**: the existing OAuth connection lacks `workflow` scope. [Ready configuration](docs/ci/github-actions.yml) remains outside the workflow directory. Local checks are not a GitHub Actions run.
 
-## Important implementation boundaries
+## Boundaries and team workflow
 
-SQLite serializes each local demo aggregate. PostgreSQL migrations, general-purpose lineage ingestion, leased outbox workers, separate validator/gateway processes, full role separation, real nftables enforcement, backup/restore qualification, and the 300-setting comparative study remain planned. Keyword inspection is a transparent fixture policy, not a validated general DLP classifier. The late-output button exercises publication admission with a captured root version; it does not run a real language model. UI execution states containing `SIMULATED` must retain that label.
+The 62-page guide also describes institutional identities, production separation and network egress controls, object storage, source attribution windows, general AND/OR dependency management, real devices and broader qualification. Those are still open. The current workspace transaction lock favors correctness over write throughput. The latest trusted ledger must be selected by an operator; off-host ledger replication/freshness authority is not implemented. Disclosure rules are bounded synthetic checks, not universal DLP.
 
-Changing repository visibility does not host the application. GitHub contains source and evidence; the demo currently runs locally.
+GitHub hosts the source and evidence; it does not host the authenticated runtime. [Read the vault](vault/00-START-HERE.md), claim a card, branch from current main, update status and tests, then request review by another teammate. Human review, another member's reproduction and the team's license decision remain pending.
 
-![WITHAQ local simulation console](docs/demo-preview.jpg)
-
-## Team workflow
-
-Read the vault before branching. Claim a backlog item, branch from current `main`, include tests and an updated handoff in the PR, and ask a different teammate to review. Public source availability is not an open-source license grant; a license decision remains with the team.
+![WITHAQ operational console](docs/console-v0.2.png)

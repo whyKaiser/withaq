@@ -583,3 +583,156 @@ footer strong {
     min-width: 130px;
   }
 }
+/* Operational engine: shared state, general data and durable job evidence. */
+.engine-console {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.engine-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+.engine-heading p {
+  max-width: 760px;
+}
+.engine-actions {
+  display: grid;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.engine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.engine-form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.engine-console input,
+.engine-console select,
+.engine-console textarea {
+  width: 100%;
+  margin: 8px 0 16px;
+}
+.engine-console textarea {
+  min-height: 110px;
+  resize: vertical;
+  font: inherit;
+  padding: 14px;
+  border: 1px solid #c9d5cd;
+  border-radius: 10px;
+  background: #fff;
+}
+.record-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+.engine-record {
+  padding: 16px;
+  border: 1px solid #dce5dc;
+  border-radius: 12px;
+  background: #fafcf8;
+  overflow-wrap: anywhere;
+}
+.engine-record > strong {
+  display: block;
+  margin-bottom: 8px;
+}
+.engine-record > code {
+  display: block;
+  margin: 8px 0;
+  direction: ltr;
+}
+.engine-record p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+.engine-record .status {
+  display: inline-block;
+  margin: 4px 0;
+}
+.compact {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.engine-audit {
+  max-height: 460px;
+  overflow: auto;
+}
+.engine-audit p {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  direction: ltr;
+}
+.hash {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.byte-preview {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  direction: ltr;
+  padding: 20px;
+  background: #f4f7ef;
+}
+.hint {
+  color: #66736a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.pass-text {
+  color: #14673d;
+}
+.fail-text {
+  color: #a12d32;
+}
+.sandbox-heading {
+  padding: 12px 4px 24px;
+  border-top: 2px solid #d3ddcd;
+}
+.delay-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+.engine-console .delay-toggle input {
+  width: auto;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .engine-heading {
+    flex-direction: column;
+  }
+  .engine-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .engine-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .engine-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .engine-actions {
+    display: grid;
+    width: 100%;
+  }
+  .artifact-grid {
+    grid-template-columns: 1fr;
+  }
+}

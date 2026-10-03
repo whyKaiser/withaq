@@ -1,0 +1,12 @@
+version: 1
+destinations:
+  mock://local:
+    account: demo
+    purpose: competition-demo
+    approval: false
+  mock://review:
+    account: demo
+    purpose: competition-demo
+    approval: true
+max_bytes: 65536
+sanitize_contacts: true

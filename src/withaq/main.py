@@ -12,6 +12,10 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from .models import Model
 from .scenarios import scenarios
 from .store import DomainError, Store
+from .database import migrate
+from .engine import Engine
+from .routes import routes
+from sqlalchemy.exc import SQLAlchemyError
 
 
 class CreateRun(Model):
@@ -37,10 +41,16 @@ class Approval(Command):
     lose_response: bool = False
 
 
-def create_app(database=None, token=None, viewer_token=None):
-    app = FastAPI(title="WITHAQ simulation", version="0.1.0")
+def create_app(database=None, token=None, viewer_token=None, engine_url=None):
+    app = FastAPI(title="WITHAQ lab", version="0.2.0")
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"])
     store = Store(database or os.environ.get("WITHAQ_DB", "data/withaq.sqlite3"))
+    engine_path = Path(database).with_name("engine.sqlite3") if database else Path("data/engine.sqlite3")
+    url = engine_url or os.environ.get("WITHAQ_DATABASE_URL") or "sqlite:///" + str(engine_path).replace("\\", "/")
+    if url.startswith("sqlite"):
+        migrate(url)
+    engine = Engine(url, os.environ.get("WITHAQ_POLICY_PATH"))
+    app.state.engine = engine
     admin = token or os.environ.get("WITHAQ_ADMIN_TOKEN", "")
     viewer = viewer_token or os.environ.get("WITHAQ_VIEWER_TOKEN", "")
 
@@ -65,6 +75,10 @@ def create_app(database=None, token=None, viewer_token=None):
     async def domain_error(request, error):
         return JSONResponse(status_code=error.status, content={"detail": error.code})
 
+    @app.exception_handler(SQLAlchemyError)
+    async def database_error(request, error):
+        return JSONResponse(status_code=503, content={"detail": "DATABASE_UNAVAILABLE"})
+
     @app.get("/health/live")
     def live():
         return {"status": "ok", "mode": "simulation"}
@@ -72,7 +86,8 @@ def create_app(database=None, token=None, viewer_token=None):
     @app.get("/health/ready")
     def ready():
         try:
-            available = bool(admin) and store.ready()
+            engine.policy.load()
+            available = bool(admin) and store.ready() and engine.db.ready()
         except Exception:
             available = False
         return JSONResponse(status_code=200 if available else 503,
@@ -105,6 +120,8 @@ def create_app(database=None, token=None, viewer_token=None):
     @app.post("/v1/demo/runs/{run_id}/{action}", dependencies=[Depends(operator)])
     def command(run_id: str, action: Literal["apply", "revoke", "complete-late", "recover"], body: Command, command_key=Depends(key)):
         return store.mutate(run_id, action, body.expected_version, command_key)
+
+    app.include_router(routes(engine, identity, operator, key))
 
     dist = Path(__file__).resolve().parent.parent.parent / "apps" / "console" / "dist"
     if dist.exists():

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import { EngineConsole } from "./EngineConsole";
 
 type Edge = { source: string; target: string };
 type Scenario = {
@@ -155,9 +156,7 @@ function App() {
           </span>
         </a>
         <div className="header-end">
-          <span className="badge">
-            {t("مختبر المحاكاة", "Simulation lab")} · v0.1
-          </span>
+          <span className="badge">{t("مختبر وثاق", "WITHAQ lab")} · v0.2</span>
           <button className="quiet" onClick={() => setEnglish(!english)}>
             {english ? "العربية" : "English"}
           </button>
@@ -190,8 +189,8 @@ function App() {
           <strong>{t("محاكاة قابلة للفحص", "Inspectable simulation")}</strong>
           <span>
             {t(
-              "بيانات اصطناعية فقط. لا تعديل للشبكة، ولا إرسال لمزود خارجي. الاتصال في الرسم لا يثبت صحة قراءة الحساس.",
-              "Synthetic data only. No network changes or external sends. Graph connectivity does not establish sensor truth.",
+              "بيانات اصطناعية فقط. قياس الحزم في مختبر معزول عند تفعيله؛ دون تعديل شبكة المضيف أو إرسال لمزود خارجي. الرسم لا يثبت صحة قراءة الحساس.",
+              "Synthetic data only. Optional isolated packet trials; no host network changes or external sends. Graph connectivity does not establish sensor truth.",
             )}
           </span>
         </div>
@@ -230,6 +229,19 @@ function App() {
         </section>
       ) : (
         <>
+          <EngineConsole token={token} english={english} />
+          <div className="sandbox-heading">
+            <p className="eyebrow">FINITE MODEL EXPLORER</p>
+            <h2>
+              {t("استكشاف المثال العلمي", "Explore the scientific model")}
+            </h2>
+            <p>
+              {t(
+                "الأداة التالية تشرح السيناريوهات المحددة بصورة تفاعلية؛ المحرك التشغيلي أعلاه يحفظ المهام والبيانات العامة.",
+                "The explorer below explains bounded scenarios interactively; the operational engine above persists general state and jobs.",
+              )}
+            </p>
+          </div>
           <section className="panel controls">
             <div>
               <label htmlFor="scenario">

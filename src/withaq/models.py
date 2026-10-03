@@ -19,7 +19,7 @@ class Contract(Model):
     target: str
     critical: bool = True
     owner: str = "synthetic-lab"
-    version: int = 1
+    version: int = Field(default=1, ge=1)
     max_age_s: float = Field(default=2, gt=0)
     max_latency_s: float = Field(default=2, gt=0)
     observed_age_s: float | None = Field(default=0.1, ge=0)
@@ -53,8 +53,8 @@ class Snapshot(Model):
     title: str
     description: str
     revision: int = Field(default=1, ge=1)
-    policy_version: int = 1
-    capability_version: int = 1
+    policy_version: int = Field(default=1, ge=1)
+    capability_version: int = Field(default=1, ge=1)
     nodes: tuple[str, ...]
     attack_sources: tuple[str, ...] = Field(min_length=1)
     protected_targets: tuple[str, ...] = Field(min_length=1)

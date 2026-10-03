@@ -20,6 +20,22 @@ planner يستخدم بحث الوصول؛ validator يبني transitive closure
 
 Markdown وروابط نسبية؛ قابل للقراءة في GitHub وObsidian دون خدمة إضافية. كل PR يحدّث الحالة والتسليم. المجلد ليس بديلًا عن مراجعة الكود أو CI، ولا يحدّث الفروع القديمة تلقائيًا؛ على العضو سحب main قبل البداية.
 
-## ADR-006 — حدود الإصدار الحالي
+## ADR-006 — حدود الإصدار 0.1 التاريخي (تجاوزها ADR-007 في 0.2)
 
 lineage مثبت في fixture، والتأخير نموذج لنتيجة معلّقة بmanifest، واستعادة المحتوى حتمية. فحص الإفصاح حقول منع محددة بالعربية والإنجليزية. لا ادعاء بتعميم التصنيف أو جودة الاستعادة على بيانات حقيقية. العام هنا مصدر GitHub فقط؛ الاستضافة العامة تحتاج قرار نشر منفصل.
+
+## ADR-007 — سلطة الحالة العامة في 0.2
+
+PostgreSQL/SQLAlchemy وثلاث migrations فعلية، lineage عام وmanifests، outbox وleases/fencing، HTTP-only worker/gateway وخدمة validator مستقلة. SQLite fallback له بروتوكول المعاملات نفسه. كل transaction قصيرة تقفل workspace أولًا ثم roots بترتيب UUID ثابت؛ اختيار متحفظ لصحة المختبر، لا ادعاء throughput موزع. الـsnapshot ذاتي الوصف؛ catalog العقود مرجع تسجيل، وإدارة lifecycle/owner/AND/OR المؤسسية متبقية. بعض جداول الدليل دُمجت: inputs/roots داخل manifest مختوم، dispatch داخل egress/outbox، ولا source-incident attribution windows عامة بعد.
+
+## ADR-008 — حزم معزولة مؤقتة بدل VM/PEP دائم
+
+لتطبيق اختيار الفريق «محاكاة على الكمبيوتر» دون تغيير شبكة المضيف: broker محلي محدود يشغّل حاوية Docker network-none بلا host mounts/ports/socket. الأجهزة اصطناعية داخل namespaces، لكنها تتبادل TCP فعليًا وتُحجب بـnftables. API يعيد التحقق من receipt موقّع بالخطة/snapshot والقياسات. يدعم G/X/P/M/A المعلن فقط. يوقف المختبر بعد التجربة؛ LAB_CONFIRMED إثبات تجربة مقاسة، لا سياسة جدار مستمرة أو hardware. controller reconciliation الطويل وعزل خروج الخدمات في النشر لم يُغلقا بهذه التجربة.
+
+## ADR-009 — إعادة بناء وفحص إفصاح حتميان
+
+المزود mock يستهلك manifest كاملًا بلا مدخلات مخفية أو شبكة. جودة الاستعادة تطابق المدخلات المحكومة وطولًا/حجمًا محددين؛ ليست equivalence علمية لـLLM. corpus عربي/إنجليزي محدود، normalization/contact masking وreinspection يحافظان على lineage. مفتاح النموذج المدفوع أو مزود خارجي ليسا مطلوبين لعرض المختبر.
+
+## ADR-010 — تأهيل الاستعادة قبل قبول القراءات
+
+اختبار PostgreSQL يعيد dump أقدم من حاجز السحب ثم يصالح ledger أحدث موقعًا بـHMAC قبل resume. المفتاح والledger خارج DB المستعادة. التوقيع يثبت السلامة والأصل بالنسبة للمفتاح، لا يثبت freshness وحده؛ اختيار أحدث ledger موثوق مسؤولية تشغيلية ما زالت تحتاج authority/replication مؤسسية. لا ادعاء exactly-once لدى مزود خارجي.

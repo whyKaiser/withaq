@@ -1,39 +1,34 @@
-# التسليم ونقطة الاستئناف
+# التسليم ونقطة الاستئناف — 3 أكتوبر 2026
 
-التاريخ: 3 أكتوبر 2026 — نسخة 0.1.0، تسليم أساس المحاكاة.
+نسخة 0.2: حالة عامة في PostgreSQL وثلاث migrations، lineage/manifests/MAHW، outbox وfencing، validator/gateway منفصلان، disclosure بأربع قرارات، console عامة، packet broker مربوط بزر التطبيق، benchmark واستعادة مؤهلة في المختبر.
 
-## المنجز
+## التحقق المنفذ
 
-مستودع عام؛ هيكل src؛ planner وvalidator مستقلان؛ ستة fixtures؛ خدمة محاكاة مع معاملات وصلاحيات محلية؛ سحب وguard وrecovery؛ exact-request approval؛ لوحة عربية/إنجليزية؛ vault وAgile وخطة المراحل.
+- `python scripts/verify_postgres.py`: 78 ناجحًا في آخر تشغيل؛ حالات engine نفسها على SQLite وPostgreSQL. مصدر الاختبارات يسجل أي إضافات بعد هذا الرقم؛ تحديث نتيجة الإصدار النهائية في evidence.
+- `tests/test_processes.py`: قتل عامل MODEL فعليًا وإعادة تشغيله؛ fence 2، مخرج واحد؛ اتصال worker بالمتحقق المستقل؛ بوابة منفصلة وOUTCOME_UNKNOWN دون إعادة عمياء.
+- `npm --prefix apps/console run build`: TypeScript وVite ناجحان.
+- `python scripts/packet_lab.py`: ثمانية checks ناجحة؛ حجب مباشر/relay واتصال قائم، خمس عينات لكل وظيفة، denies لا تفتح تلقائيًا خلال فحص غياب rule installer.
+- اللوحة على PostgreSQL: خطة `{a,b}`؛ زر packet-lab أعاد LAB_CONFIRMED مع MEASURED PASS لكل عقد وreceipt موقّع؛ approve/dispatch أعاد MOCK_SENT.
+- سحب GUI أثناء مهمة MODEL بعد LEASED: ROOT_REVOKED ثم REJECTED عند publication؛ السحب قبل النشر موثق بالأوقات في أحداث التجربة. تجربة أخرى سُحبت بعد النشر؛ مخرجها صار REVOKED، ولا تُحسب كاختبار نشر متأخر.
+- `python scripts/benchmark.py`: 300 إعداد model-only. MFSC: 30 OPTIMAL، 20 INFEASIBLE، 10 UNKNOWN من 60 تكوينًا. المقارنة لا تدعي تفوقًا ميدانيًا.
+- `python scripts/restore_qualification.py`: سبعة checks ناجحة في PostgreSQL؛ dump أقدم من السحب، ledger أحدث موثق، الحاجز قبل resume.
 
-## آخر تحقق
+أدلة الإصدار وsource commits في `docs/evidence/README.md`. نتائج 0.1 محفوظة كأدلة تاريخية فقط. تحديث vault لا يعني مراجعة بشرية أو تشغيل عضو ثانٍ. تحذير TestClient/httpx upstream معروف ولا يغيّر نجاح الفحص.
 
-- `python -m pytest` — 30 ناجحًا؛ يشمل 16 مجموعة Oracle، races محلية، guard لإعادة الطلب، وصلاحيات API.
-- `npm --prefix apps/console run build` — نجح TypeScript وبناء Vite.
-- `pip install --require-hashes -r requirements.lock.txt` — نجح التحقق في بيئة Windows الحالية؛ تثبيت نظيف على Linux لم يتحقق بعد.
-- `python scripts/export_evidence.py` — نجح إخراج ستة قرارات ورحلة استعادة/إفصاح محاكية.
-- فحص متصفح فعلي: دخول، إنشاء تجربة، اختيار {a,b}، تطبيق محاكى، سحب S1، رفض late output، T2b من S2، فحص واعتماد وإرسال mock؛ النتيجة SIMULATED_SENT وصفر بايتات خارجية.
-- لقطة واجهة محفوظة في `docs/demo-preview.jpg`، دون token أو محتوى حقيقي.
-- مراجعة إضافية للواجهة الإنجليزية: INFEASIBLE وتعطيل التطبيق في shared-channel. تظهر حالة الوصول إلى الهدف مستقلة عن حالات الوظائف؛ لا تعرض كلفة صفر كحل عند غياب خطة قابلة للتنفيذ.
-- إعادة إنتاج من clone عام جديد للإصدار `6e41444`: بيئة Python فارغة، تثبيت lock ذي hashes، تثبيت npm ci، بناء الواجهة، 30 اختبارًا ناجحًا وتصدير الأدلة. شبكة npm أعادت ECONNRESET وتأخرت؛ أُكمل التثبيت من cache الحزم المحلية مع تحقق package-lock. هذا تحقق Windows على الجهاز نفسه، لا تحقق Linux أو جهاز عضو ثانٍ.
-- يوجد تحذير upstream من Starlette بخصوص TestClient/httpx؛ ليس فشل اختبار. لا نُسكت التحذير تلقائيًا.
+## نقاط الاستئناف
 
-العرض يعمل محليًا. التنفيذ الحالي لا يتضمن خدمة مستضافة للعامة أو PostgreSQL/outbox أو حجب شبكة فعلي. تشغيل عضو آخر ومراجعته البشرية لم يحدثا بعد.
+راجع `docs/POSTER-TRACEABILITY.md` والبطاقات المتبقية. الأولوية: مراجعة عضو وتشغيله المستقل قبل 8 أكتوبر، ثم اختبار متصفح آلي وإدارة العقود والاعتماديات، ثم عزل خروج الخدمات والتشغيل طويل المدة ودفعات مصادر الأجهزة. لا تخلط LAB_CONFIRMED مع PEP دائم أو استضافة عامة.
 
-GitHub رفض مسار `.github/workflows/ci.yml` بسبب نقص صلاحية `workflow` في اتصال OAuth. حُفظ القالب في `docs/ci/github-actions.yml` ليُفعّله مسؤول مخوّل لاحقًا. لا يوجد تشغيل CI ناجح مزعوم؛ فحصنا الحالي محلي. لم تُنشر الأسرار أو يتم توسيع صلاحيات الاتصال تلقائيًا.
+GitHub Actions غير مفعّل: OAuth رفض كتابة workflow. القالب في `docs/ci`. لم توسع الصلاحيات تلقائيًا ولم تنشر أسرار التشغيل.
 
-## نقطة البدء للعضو التالي
-
-اقرأ ADR-002 ثم ابدأ WQ-008 بعد نجاح bootstrap. حافظ على ثوابت السحب أثناء نقل الحالة إلى PostgreSQL. لا تصف D1/D3 كمنجزين بالكامل لمجرد نجاح fixture SQLite. راجع WQ-016 لمراجعة UI مستقلة، واطلب من عضو آخر تشغيل المصدر من clone جديد.
-
-## قالب تحديث إلزامي مع تغيير السلوك
+## قالب تسليم كل تغيير
 
 ```text
 التاريخ / العضو / البطاقة / الفرع:
 ما تغير ولماذا:
 الواجهات أو القرارات المتأثرة:
-الاختبارات المنفذة ونتيجتها:
-أدلة raw / PR / commit:
+الفحوصات ونتيجتها:
+raw evidence / PR / commit:
 المتبقي والعوائق:
-الخطوة التالية المحددة:
+الخطوة التالية:
 ```

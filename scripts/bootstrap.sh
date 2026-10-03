@@ -7,4 +7,4 @@ test -d .venv || python3 -m venv .venv
 npm --prefix apps/console ci --ignore-scripts
 npm --prefix apps/console run build
 .venv/bin/python -m pytest
-printf '%s\n' 'Ready: .venv/bin/python scripts/serve.py'
+printf '%s\n' 'Ready: .venv/bin/python scripts/lab.py (see README for PostgreSQL/packet mode)'
