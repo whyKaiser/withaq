@@ -1,0 +1,18 @@
+{
+  "review_date_riyadh": "2026-10-03",
+  "mode": "simulation",
+  "clean_clone_commit": "6e414444cd5ce4262d616d381a1b6505bf3c37bb",
+  "clean_python_environment": true,
+  "hashed_python_lock_installed": true,
+  "npm_ci": "passed with local integrity-checked package cache after registry connection resets",
+  "python": "3.12.9",
+  "node": "25.6.0",
+  "npm": "11.8.0",
+  "os": "Windows",
+  "python_tests_passed": 30,
+  "frontend_typecheck_and_build": "passed",
+  "browser_manual": ["Arabic login and complete recovery/disclosure journey", "English interface", "INFEASIBLE application disabled", "Final unreachable-plan cost shown as dash; attack reachability shown separately"],
+  "known_warning": "Starlette TestClient deprecates httpx in favor of httpx2",
+  "github_actions": "not enabled; OAuth workflow scope unavailable; template in docs/ci",
+  "not_verified": ["Linux bootstrap", "second team member reproduction", "real packet enforcement", "external provider delivery", "distributed worker restart", "backup restoration", "300-setting comparative benchmark"]
+}

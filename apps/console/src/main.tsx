@@ -308,7 +308,11 @@ function App() {
                 </div>
                 <div>
                   <span>{t("الكلفة في النموذج", "Model cost")}</span>
-                  <strong>{run.plan.cost}</strong>
+                  <strong>
+                    {["OPTIMAL", "FEASIBLE"].includes(run.plan.status)
+                      ? run.plan.cost
+                      : "—"}
+                  </strong>
                 </div>
                 <div>
                   <span>{t("المرشحون المفحوصون", "Candidates checked")}</span>
@@ -358,6 +362,23 @@ function App() {
                         )
                       : t("مرفوض أو غير محسوم", "Rejected or unknown")}
                   </p>
+                  <div className="contract">
+                    <span>
+                      {t(
+                        "الوصول إلى الهدف المحمي داخل النموذج",
+                        "Protected-target reachability in this model",
+                      )}
+                    </span>
+                    <span
+                      className={
+                        run.validation.attack_blocked
+                          ? "status active"
+                          : "status revoked"
+                      }
+                    >
+                      {run.validation.attack_blocked ? "BLOCKED" : "REACHABLE"}
+                    </span>
+                  </div>
                   {Object.entries(run.validation.contracts).map(
                     ([id, pass]) => (
                       <div className="contract" key={id}>
