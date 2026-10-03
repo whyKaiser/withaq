@@ -4,6 +4,7 @@ All committed input values are synthetic. Read the mode, source commit, recordin
 
 | Bundle | Meaning |
 |---|---|
+| `public-deployment.json` | Anonymous HTTPS browser workflow and actual automatic main-branch deployment; distinct disposable simulation scope |
 | `benchmark-v0.2.json` / `.csv` | 300 model settings; 60 complete seeded snapshots; five explicit project policies; every rejection/unknown retained |
 | `packet-lab-v0.2.json` | Actual TCP/nftables trial inside a network-none container; individual monitor/alert and attack records, rules/counters, routes and runtime versions |
 | `restore-v0.2.json` | Executed PostgreSQL old-dump/newer-ledger qualification in disposable databases; tamper/read/resume checks |

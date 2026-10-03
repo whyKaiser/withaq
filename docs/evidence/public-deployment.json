@@ -1,0 +1,51 @@
+{
+  "recorded_date": "2026-10-03",
+  "url": "https://withaq-demo.onrender.com/",
+  "platform": "Render",
+  "plan": "Free",
+  "region": "Frankfurt",
+  "mode": "disposable-per-visitor-simulation",
+  "browser_qualified_source_commit": "8466ffe74e727062079b058f86d54baba44e7f84",
+  "automatic_deployment_observed": {
+    "initial_source": "d683623c26310cf84690a29a16fecb7d67fcb4fd",
+    "subsequent_source": "8466ffe74e727062079b058f86d54baba44e7f84",
+    "render_trigger": "Auto-Deploy",
+    "render_state": "Live",
+    "configured_branch": "main",
+    "configured_trigger": "On Commit"
+  },
+  "anonymous_browser_observations": [
+    "HTTPS page reachable without Render or GitHub login",
+    "Session created without an operator credential",
+    "Sealed summary published by separate worker",
+    "Independent validator accepted a+b at cost 2",
+    "Application completed as SIMULATED_CONFIRMED",
+    "Exact disclosure bytes reviewed and APPROVED",
+    "Separate gateway completed MOCK_SENT",
+    "S1 root became REVOKED and derived outputs unreadable",
+    "Independent T3 stayed ACTIVE; unknown lineage stayed HELD",
+    "New T2b published with S2-only roots; revoked S1 not reactivated"
+  ],
+  "validation": {
+    "windows_with_postgresql_tests": 84,
+    "latest_windows_seconds": 36.32,
+    "linux_container_tests": 68,
+    "frontend_build": "passed",
+    "credential_scan": "passed",
+    "test_warning": "Upstream Starlette TestClient/httpx deprecation",
+    "provenance": "Live browser observations refer to the stated source. Final loading-state and malformed-JSON hardening were tested on Windows before their next deployment; each changed deployment image also runs its Linux Python suite. These counts are not packet or physical-device trials."
+  },
+  "bounds": {
+    "session_lifetime_minutes": 45,
+    "concurrent_sessions": 8,
+    "writes_per_session": 256,
+    "body_bytes": 32768,
+    "packet_adapter": false,
+    "provider": "mock",
+    "external_bytes_sent": 0,
+    "restart_or_deploy_resets_temporary_sessions": true,
+    "github_actions_active": false,
+    "independent_teammate_review_completed": false
+  },
+  "screenshot": "../public-demo.png"
+}

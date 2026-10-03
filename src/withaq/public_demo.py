@@ -202,7 +202,10 @@ def create_app(directory=None, public_url=None, maximum=None, ttl=2700, clock=ti
                     raise HTTPException(422, detail="DEMO_SCENARIOS_ONLY")
             if path.endswith("/apply"):
                 try:
-                    if json.loads(data).get("adapter", "simulation") != "simulation":
+                    application = json.loads(data)
+                    if not isinstance(application, dict):
+                        raise HTTPException(422, detail="DEMO_BODY_INVALID")
+                    if application.get("adapter", "simulation") != "simulation":
                         raise HTTPException(403, detail="PUBLIC_PACKET_ADAPTER_UNAVAILABLE")
                 except ValueError:
                     raise HTTPException(422, detail="DEMO_BODY_INVALID")

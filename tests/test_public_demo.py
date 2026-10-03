@@ -62,6 +62,7 @@ def test_origin_internal_routes_body_and_packet_boundaries(demo):
         assert visitor.post("/v1/roots", content=b"x" * 32769).status_code == 413
         assert visitor.get("/v1/capabilities").json()["packet_lab_configured"] is False
         assert visitor.post("/v1/plans/arbitrary/apply", json={"adapter": "packet-lab"}).status_code == 403
+        assert visitor.post("/v1/plans/arbitrary/apply", json=[]).status_code == 422
         safe = scenarios()["separable"].model_dump(mode="json")
         assert mutate(visitor, "/v1/snapshots", {"spec": safe}).status_code == 200
         safe["nodes"].append("arbitrary-public-model")

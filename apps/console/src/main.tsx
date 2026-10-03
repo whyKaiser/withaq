@@ -72,10 +72,13 @@ function App() {
   const [notice, setNotice] = useState("");
   const [english, setEnglish] = useState(false);
   const [publicDemo, setPublicDemo] = useState<{source_commit: string; session_minutes: number} | null>(null);
+  const [checkingMode, setCheckingMode] = useState(true);
+  const [modeFailed, setModeFailed] = useState(false);
   useEffect(() => {
     void fetch("/demo/config").then(async response => {
       if (response.ok) setPublicDemo(await response.json());
-    }).catch(() => {});
+      else if (response.status !== 404) throw new Error("Unavailable");
+    }).catch(() => setModeFailed(true)).finally(() => setCheckingMode(false));
   }, []);
   const t = (ar: string, en: string) => (english ? en : ar);
   async function api(path: string, body?: unknown) {
@@ -202,7 +205,10 @@ function App() {
           </span>
         </div>
       </section>
-      {!scenarios.length ? (
+      {checkingMode || modeFailed ? <section className="panel login">
+        <p>{checkingMode ? t("جارٍ تجهيز التجربة…", "Preparing the experiment…") : t("تعذر الاتصال. أعد المحاولة.", "Could not connect. Please retry.")}</p>
+        {modeFailed && <button onClick={() => window.location.reload()}>{t("إعادة المحاولة", "Retry")}</button>}
+      </section> : !scenarios.length ? (
         <section className="panel login">
           <p className="eyebrow">{publicDemo ? "JUDGE DEMONSTRATION" : "LOCAL DEVELOPMENT"}</p>
           <h2>{t("الدخول إلى المختبر", "Enter the lab")}</h2>
