@@ -1,0 +1,536 @@
+{
+  "mode": "simulation",
+  "generated_at": "2026-10-03T14:46:23.708305+00:00",
+  "source_commit": "a329f747ec9f7c0b3b7207d6b766a9f68eb12fe9",
+  "python": "3.12.9",
+  "platform": "Windows",
+  "fixture_set": "deterministic-v1",
+  "scope": "Six deterministic finite models and one local mock journey; no packet or 300-setting benchmark.",
+  "decisions": [
+    {
+      "scenario": "separable",
+      "plan": {
+        "snapshot_id": "separable",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "OPTIMAL",
+        "actions": [
+          "a",
+          "b"
+        ],
+        "cost": 2,
+        "examined": 16,
+        "feasible_count": 3,
+        "reason": "Complete finite search; optimum only within this model."
+      },
+      "validation": {
+        "accepted": true,
+        "reasons": [],
+        "attack_blocked": true,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": true
+        }
+      }
+    },
+    {
+      "scenario": "shared-channel",
+      "plan": {
+        "snapshot_id": "shared-channel",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "INFEASIBLE",
+        "actions": [],
+        "cost": 0,
+        "examined": 16,
+        "feasible_count": 0,
+        "reason": "Complete search found no plan satisfying every hard constraint."
+      },
+      "validation": {
+        "accepted": false,
+        "reasons": [
+          "NO_EXECUTABLE_PLAN",
+          "ATTACK_REACHABLE:declared"
+        ],
+        "attack_blocked": false,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": true,
+          "declared:FC3": true
+        }
+      }
+    },
+    {
+      "scenario": "bounded-dependency",
+      "plan": {
+        "snapshot_id": "bounded-dependency",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "OPTIMAL",
+        "actions": [
+          "a",
+          "d"
+        ],
+        "cost": 3,
+        "examined": 16,
+        "feasible_count": 1,
+        "reason": "Complete finite search; optimum only within this model."
+      },
+      "validation": {
+        "accepted": true,
+        "reasons": [],
+        "attack_blocked": true,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": true,
+          "relay-is-critical:FC1": true,
+          "relay-is-critical:FC2": true,
+          "relay-is-critical:FC3": true
+        }
+      }
+    },
+    {
+      "scenario": "unknown-evidence",
+      "plan": {
+        "snapshot_id": "unknown-evidence",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "UNKNOWN",
+        "actions": [],
+        "cost": 0,
+        "examined": 0,
+        "feasible_count": 0,
+        "reason": "Required dependency or probe evidence is missing."
+      },
+      "validation": {
+        "accepted": false,
+        "reasons": [
+          "NO_EXECUTABLE_PLAN",
+          "UNKNOWN_EVIDENCE",
+          "ATTACK_REACHABLE:declared"
+        ],
+        "attack_blocked": false,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": true
+        }
+      }
+    },
+    {
+      "scenario": "late-alert",
+      "plan": {
+        "snapshot_id": "late-alert",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "INFEASIBLE",
+        "actions": [],
+        "cost": 0,
+        "examined": 16,
+        "feasible_count": 0,
+        "reason": "Complete search found no plan satisfying every hard constraint."
+      },
+      "validation": {
+        "accepted": false,
+        "reasons": [
+          "NO_EXECUTABLE_PLAN",
+          "ATTACK_REACHABLE:declared",
+          "CONTRACT_FAILED_OR_UNKNOWN:declared:FC2"
+        ],
+        "attack_blocked": false,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": false
+        }
+      }
+    },
+    {
+      "scenario": "unavailable-action",
+      "plan": {
+        "snapshot_id": "unavailable-action",
+        "revision": 1,
+        "policy_version": 1,
+        "capability_version": 1,
+        "status": "OPTIMAL",
+        "actions": [
+          "a",
+          "d"
+        ],
+        "cost": 3,
+        "examined": 16,
+        "feasible_count": 1,
+        "reason": "Complete finite search; optimum only within this model."
+      },
+      "validation": {
+        "accepted": true,
+        "reasons": [],
+        "attack_blocked": true,
+        "contracts": {
+          "declared:FC1": true,
+          "declared:FC2": true
+        }
+      }
+    }
+  ],
+  "journey": {
+    "id": "fbc11fed-94af-4ad5-ac2c-ec73711f8987",
+    "version": 8,
+    "mode": "simulation",
+    "scenario": "separable",
+    "policy": "mfsc",
+    "snapshot": {
+      "id": "separable",
+      "title": "احتواء مع استمرار الوظائف",
+      "description": "مساران للهجوم، ووظيفتا مراقبة وتنبيه مستقلتان عنهما.",
+      "revision": 1,
+      "policy_version": 1,
+      "capability_version": 1,
+      "nodes": [
+        "G",
+        "X",
+        "P",
+        "M",
+        "A"
+      ],
+      "attack_sources": [
+        "G"
+      ],
+      "protected_targets": [
+        "P"
+      ],
+      "actions": [
+        {
+          "id": "a",
+          "label": "Block G–P",
+          "cost": 1,
+          "blocks": [
+            {
+              "source": "G",
+              "target": "P"
+            }
+          ],
+          "enforceable": true
+        },
+        {
+          "id": "b",
+          "label": "Block G–X",
+          "cost": 1,
+          "blocks": [
+            {
+              "source": "G",
+              "target": "X"
+            }
+          ],
+          "enforceable": true
+        },
+        {
+          "id": "c",
+          "label": "Isolate G",
+          "cost": 1,
+          "blocks": [
+            {
+              "source": "G",
+              "target": "P"
+            },
+            {
+              "source": "G",
+              "target": "X"
+            },
+            {
+              "source": "G",
+              "target": "M"
+            },
+            {
+              "source": "G",
+              "target": "A"
+            }
+          ],
+          "enforceable": true
+        },
+        {
+          "id": "d",
+          "label": "Block X–P",
+          "cost": 2,
+          "blocks": [
+            {
+              "source": "X",
+              "target": "P"
+            }
+          ],
+          "enforceable": true
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "declared",
+          "attack_edges": [
+            {
+              "source": "G",
+              "target": "P"
+            },
+            {
+              "source": "G",
+              "target": "X"
+            },
+            {
+              "source": "X",
+              "target": "P"
+            }
+          ],
+          "function_edges": [
+            {
+              "source": "G",
+              "target": "M"
+            },
+            {
+              "source": "G",
+              "target": "A"
+            }
+          ],
+          "contracts": [
+            {
+              "id": "FC1",
+              "name": "Monitoring",
+              "source": "G",
+              "target": "M",
+              "critical": true,
+              "owner": "synthetic-lab",
+              "version": 1,
+              "max_age_s": 2.0,
+              "max_latency_s": 2.0,
+              "observed_age_s": 0.1,
+              "observed_latencies_s": [
+                0.1
+              ],
+              "lost_events": 0
+            },
+            {
+              "id": "FC2",
+              "name": "Alert delivery",
+              "source": "G",
+              "target": "A",
+              "critical": true,
+              "owner": "synthetic-lab",
+              "version": 1,
+              "max_age_s": 2.0,
+              "max_latency_s": 2.0,
+              "observed_age_s": 0.1,
+              "observed_latencies_s": [
+                0.1
+              ],
+              "lost_events": 0
+            }
+          ]
+        }
+      ],
+      "evidence_complete": true
+    },
+    "plan": {
+      "snapshot_id": "separable",
+      "revision": 1,
+      "policy_version": 1,
+      "capability_version": 1,
+      "status": "OPTIMAL",
+      "actions": [
+        "a",
+        "b"
+      ],
+      "cost": 2,
+      "examined": 16,
+      "feasible_count": 3,
+      "reason": "Complete finite search; optimum only within this model."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": [],
+      "attack_blocked": true,
+      "contracts": {
+        "declared:FC1": true,
+        "declared:FC2": true
+      }
+    },
+    "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+    "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+    "enforcement": "SIMULATED_CONFIRMED",
+    "roots": {
+      "S1": {
+        "status": "REVOKED",
+        "version": 2
+      },
+      "S2": {
+        "status": "ACTIVE",
+        "version": 1
+      },
+      "S3": {
+        "status": "ACTIVE",
+        "version": 1
+      }
+    },
+    "artifacts": [
+      {
+        "id": "T1",
+        "roots": {
+          "S1": 1
+        },
+        "parents": [],
+        "status": "REVOKED"
+      },
+      {
+        "id": "T2",
+        "roots": {
+          "S1": 1
+        },
+        "parents": [
+          "T1"
+        ],
+        "status": "REVOKED"
+      },
+      {
+        "id": "T3",
+        "roots": {
+          "S3": 1
+        },
+        "parents": [],
+        "status": "ACTIVE"
+      },
+      {
+        "id": "C-D",
+        "roots": {},
+        "parents": [],
+        "status": "HELD"
+      },
+      {
+        "id": "T2b",
+        "roots": {
+          "S2": 1
+        },
+        "parents": [],
+        "status": "ACTIVE"
+      }
+    ],
+    "disclosures": {
+      "d28d7597-a605-482b-af64-24ac52f1f03b": {
+        "id": "d28d7597-a605-482b-af64-24ac52f1f03b",
+        "artifact": "T2b",
+        "roots": {
+          "S2": 1
+        },
+        "payload_hash": "afeb9e281f9c5aeb87ee3806eca33dffd2fe3bff5f9d25d36d440d7e249d2bdb",
+        "destination": "mock://review",
+        "account": "demo",
+        "purpose": "competition-demo",
+        "policy_version": 1,
+        "status": "SIMULATED_SENT",
+        "reason": null,
+        "expires_at": 1791039083.699307,
+        "approval_hash": "a6c6bf82330453cf43f85f0293e4bc3f0a258570b486976ff1764361e47a9582"
+      }
+    },
+    "events": [
+      {
+        "seq": 1,
+        "at": "2026-10-03T14:46:23.680307+00:00",
+        "kind": "INCIDENT_SIMULATED",
+        "details": {
+          "scenario": "separable"
+        }
+      },
+      {
+        "seq": 2,
+        "at": "2026-10-03T14:46:23.680307+00:00",
+        "kind": "PLAN_CHECKED",
+        "details": {
+          "accepted": true,
+          "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+          "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf"
+        }
+      },
+      {
+        "seq": 3,
+        "at": "2026-10-03T14:46:23.684344+00:00",
+        "kind": "SIMULATED_RULES_APPLIED",
+        "details": {
+          "actions": [
+            "a",
+            "b"
+          ],
+          "measured_packets": false
+        }
+      },
+      {
+        "seq": 4,
+        "at": "2026-10-03T14:46:23.687307+00:00",
+        "kind": "ROOT_REVOKED",
+        "details": {
+          "root": "S1",
+          "barrier_version": 2
+        }
+      },
+      {
+        "seq": 5,
+        "at": "2026-10-03T14:46:23.691306+00:00",
+        "kind": "LATE_PUBLICATION_REJECTED",
+        "details": {
+          "reason": "ROOT_REVOKED"
+        }
+      },
+      {
+        "seq": 6,
+        "at": "2026-10-03T14:46:23.695303+00:00",
+        "kind": "REPLACEMENT_PUBLISHED",
+        "details": {
+          "artifact": "T2b",
+          "roots": [
+            "S2"
+          ],
+          "quality_check": "deterministic_fixture_only"
+        }
+      },
+      {
+        "seq": 7,
+        "at": "2026-10-03T14:46:23.699307+00:00",
+        "kind": "DISCLOSURE_INSPECTED",
+        "details": {
+          "request_id": "d28d7597-a605-482b-af64-24ac52f1f03b",
+          "decision": "REVIEW_REQUIRED",
+          "reason": null
+        }
+      },
+      {
+        "seq": 8,
+        "at": "2026-10-03T14:46:23.702307+00:00",
+        "kind": "EXACT_REQUEST_APPROVED",
+        "details": {
+          "request_id": "d28d7597-a605-482b-af64-24ac52f1f03b",
+          "binding_hash": "a6c6bf82330453cf43f85f0293e4bc3f0a258570b486976ff1764361e47a9582"
+        }
+      },
+      {
+        "seq": 9,
+        "at": "2026-10-03T14:46:23.706307+00:00",
+        "kind": "DISPATCH_ADMITTED",
+        "details": {
+          "request_id": "d28d7597-a605-482b-af64-24ac52f1f03b",
+          "payload_hash": "afeb9e281f9c5aeb87ee3806eca33dffd2fe3bff5f9d25d36d440d7e249d2bdb"
+        }
+      },
+      {
+        "seq": 10,
+        "at": "2026-10-03T14:46:23.706307+00:00",
+        "kind": "SIMULATED_SENT",
+        "details": {
+          "request_id": "d28d7597-a605-482b-af64-24ac52f1f03b",
+          "external_bytes_sent": 0
+        }
+      }
+    ],
+    "command_result": {
+      "status": "SIMULATED_SENT",
+      "external_bytes_sent": 0
+    }
+  }
+}
