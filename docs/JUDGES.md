@@ -1,5 +1,7 @@
 # WITHAQ — judge demonstration
 
+**Browser trial:** [Try WITHAQ](https://withaq-demo.onrender.com/), choose Try WITHAQ, then Create full experiment. No installation or account. Each visitor has an isolated temporary workspace. Public application is simulated; real packet trials require the local lab below. Source pushes to main redeploy automatically after build/tests. Free hosting can take longer to wake after inactivity. Read [deployment limits](DEPLOYMENT.md).
+
 Start using README's PostgreSQL + `--packets` commands. Log in with the locally generated operator token. No real personal data or provider key is needed.
 
 1. **Create a full experiment.** The API creates independent S1/S2/S3 roots, T1/T3, an unknown artifact held as C-D, and a queued T2 summary. The HTTP worker publishes T2 with its sealed input manifest and S1 root closure.

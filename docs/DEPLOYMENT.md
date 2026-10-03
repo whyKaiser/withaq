@@ -1,5 +1,7 @@
 # Public judge demonstration
 
+Configured service URL: https://withaq-demo.onrender.com/. Initial deployment is being qualified; current activation evidence is in HANDOFF.
+
 Existing WITHAQ APIs, planner, lineage engine and disclosure gateway run in four service processes, with a separate validator. Each visitor has a separate SQLite workspace and HttpOnly/SameSite cookie (Secure over HTTPS). Operator/service credentials and local PostgreSQL data are never exposed.
 
 `render.yaml` / `deploy/Dockerfile`: Render Free, main, **On Commit**, health `/health/ready`. Builds run Python tests and TypeScript/Vite; failed builds cannot replace the working deployment. Local/unmerged branch commits do not update the URL. No GitHub Actions workflow permission required.
