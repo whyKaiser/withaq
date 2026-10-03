@@ -1,0 +1,987 @@
+{
+  "mode": "isolated-container-packets",
+  "synthetic_devices": true,
+  "host_firewall_modified": false,
+  "topology": "G/X/P/M/A through one PEP; X is an application relay",
+  "cases": {
+    "before": {
+      "p": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00033283233642578125,
+            "latency_s": 0.018994002999534132
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00011944770812988281,
+            "latency_s": 0.000782721000177844
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0002605915069580078,
+            "latency_s": 0.0010535190003793105
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0001506805419921875,
+            "latency_s": 0.0009139260000665672
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00015807151794433594,
+            "latency_s": 0.0008737299995118519
+          }
+        ]
+      },
+      "x": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": true,
+            "freshness_s": 0.003056764602661133,
+            "latency_s": 0.006292298000516894
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": true,
+            "freshness_s": 0.0010480880737304688,
+            "latency_s": 0.0015772690003359457
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": true,
+            "freshness_s": 0.0015213489532470703,
+            "latency_s": 0.0022724800001014955
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": true,
+            "freshness_s": 0.0010118484497070312,
+            "latency_s": 0.0014935280005374807
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": true,
+            "freshness_s": 0.0009310245513916016,
+            "latency_s": 0.0018890410001404234
+          }
+        ]
+      },
+      "m": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00022363662719726562,
+            "latency_s": 0.0035183060008421307
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00012731552124023438,
+            "latency_s": 0.000638550999610743
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0002243518829345703,
+            "latency_s": 0.0009108619997277856
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.000148773193359375,
+            "latency_s": 0.0006884650001666159
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00016546249389648438,
+            "latency_s": 0.0009262640005545109
+          }
+        ]
+      },
+      "a": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0002999305725097656,
+            "latency_s": 0.003567281000869116
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00022292137145996094,
+            "latency_s": 0.0010636239994710195
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.000202178955078125,
+            "latency_s": 0.0011187110003447742
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00010466575622558594,
+            "latency_s": 0.0006797149999329122
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00017142295837402344,
+            "latency_s": 0.0008116279996102094
+          }
+        ]
+      }
+    },
+    "established_after": {
+      "records": [
+        {
+          "sequence": 1,
+          "mode": "established",
+          "delivered": false,
+          "latency_s": 0.4006757799998013
+        },
+        {
+          "sequence": 2,
+          "mode": "established",
+          "delivered": false,
+          "latency_s": 0.4005748500003392
+        },
+        {
+          "sequence": 3,
+          "mode": "established",
+          "delivered": false,
+          "latency_s": 0.40051463799954945
+        },
+        {
+          "sequence": 4,
+          "mode": "established",
+          "delivered": false,
+          "latency_s": 0.4007081739991918
+        },
+        {
+          "sequence": 5,
+          "mode": "established",
+          "delivered": false,
+          "latency_s": 0.40059040100004495
+        }
+      ]
+    },
+    "mfsc_after": {
+      "p": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4018697820001762
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40076035499987483
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40069616199980373
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4006964609998249
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4007999280001968
+          }
+        ]
+      },
+      "x": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4020166239997707
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40063631999964855
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4008938569995735
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4006458840003688
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.400823921000665
+          }
+        ]
+      },
+      "m": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.000186920166015625,
+            "latency_s": 0.0023181659998954274
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0002410411834716797,
+            "latency_s": 0.0008179939995898167
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 9.560585021972656e-05,
+            "latency_s": 0.000504942000588926
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 9.012222290039062e-05,
+            "latency_s": 0.00044017900017934153
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 9.632110595703125e-05,
+            "latency_s": 0.0005985100006000721
+          }
+        ]
+      },
+      "a": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00016498565673828125,
+            "latency_s": 0.0020797130000573816
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.000110626220703125,
+            "latency_s": 0.0005578239997703349
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00012421607971191406,
+            "latency_s": 0.0004514819993346464
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00012159347534179688,
+            "latency_s": 0.0004045850000693463
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0001494884490966797,
+            "latency_s": 0.000695097999596328
+          }
+        ]
+      }
+    },
+    "controller_absent": {
+      "p": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40221899799962557
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40068547100054275
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4007026360004602
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4008906270000807
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40068343700022524
+          }
+        ]
+      },
+      "m": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0002677440643310547,
+            "latency_s": 0.0028596869997272734
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 9.965896606445312e-05,
+            "latency_s": 0.0005488189999596216
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00010967254638671875,
+            "latency_s": 0.000555102999896917
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00014328956604003906,
+            "latency_s": 0.0004910610005026683
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 8.58306884765625e-05,
+            "latency_s": 0.0004343679993326077
+          }
+        ]
+      },
+      "a": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00015234947204589844,
+            "latency_s": 0.002444595999804733
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00014400482177734375,
+            "latency_s": 0.0007775670001137769
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.00010132789611816406,
+            "latency_s": 0.0006099210004322231
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 9.393692016601562e-05,
+            "latency_s": 0.0005101149999973131
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": true,
+            "protected_reached": null,
+            "freshness_s": 0.0001652240753173828,
+            "latency_s": 0.0005855610006619827
+          }
+        ]
+      }
+    },
+    "full_quarantine": {
+      "m": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4024842709995937
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4006471020002209
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4006145530001959
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40068680999956996
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4007521119992816
+          }
+        ]
+      },
+      "a": {
+        "records": [
+          {
+            "sequence": 1,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4022165500000483
+          },
+          {
+            "sequence": 2,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4006377169998814
+          },
+          {
+            "sequence": 3,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40070279400060826
+          },
+          {
+            "sequence": 4,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.4007138320002923
+          },
+          {
+            "sequence": 5,
+            "mode": "new",
+            "delivered": false,
+            "latency_s": 0.40071587300008105
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "nftables": "nftables v1.1.3 (Commodore Bullmoose #4)",
+    "iproute2": "ip utility, iproute2-6.15.0, libbpf 1.5.0"
+  },
+  "applied_actions": [
+    "a",
+    "b"
+  ],
+  "rules": {
+    "nftables": [
+      {
+        "metainfo": {
+          "version": "1.1.3",
+          "release_name": "Commodore Bullmoose #4",
+          "json_schema_version": 1
+        }
+      },
+      {
+        "table": {
+          "family": "inet",
+          "name": "withaq_lab",
+          "handle": 2
+        }
+      },
+      {
+        "chain": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "name": "forward",
+          "handle": 1,
+          "type": "filter",
+          "hook": "forward",
+          "prio": 0,
+          "policy": "drop"
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 2,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.0.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": "10.77.1.2"
+              }
+            },
+            {
+              "counter": {
+                "packets": 11,
+                "bytes": 708
+              }
+            },
+            {
+              "drop": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 3,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.1.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": "10.77.0.2"
+              }
+            },
+            {
+              "counter": {
+                "packets": 0,
+                "bytes": 0
+              }
+            },
+            {
+              "drop": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 4,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.0.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": "10.77.2.2"
+              }
+            },
+            {
+              "counter": {
+                "packets": 5,
+                "bytes": 300
+              }
+            },
+            {
+              "drop": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 5,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.2.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": "10.77.0.2"
+              }
+            },
+            {
+              "counter": {
+                "packets": 0,
+                "bytes": 0
+              }
+            },
+            {
+              "drop": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 6,
+          "expr": [
+            {
+              "match": {
+                "op": "in",
+                "left": {
+                  "ct": {
+                    "key": "state"
+                  }
+                },
+                "right": [
+                  "established",
+                  "related"
+                ]
+              }
+            },
+            {
+              "accept": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 8,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.0.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": {
+                  "set": [
+                    "10.77.1.2",
+                    "10.77.2.2",
+                    "10.77.3.2",
+                    "10.77.4.2"
+                  ]
+                }
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "tcp",
+                    "field": "dport"
+                  }
+                },
+                "right": 9300
+              }
+            },
+            {
+              "accept": null
+            }
+          ]
+        }
+      },
+      {
+        "rule": {
+          "family": "inet",
+          "table": "withaq_lab",
+          "chain": "forward",
+          "handle": 9,
+          "expr": [
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "saddr"
+                  }
+                },
+                "right": "10.77.2.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "ip",
+                    "field": "daddr"
+                  }
+                },
+                "right": "10.77.1.2"
+              }
+            },
+            {
+              "match": {
+                "op": "==",
+                "left": {
+                  "payload": {
+                    "protocol": "tcp",
+                    "field": "dport"
+                  }
+                },
+                "right": 9300
+              }
+            },
+            {
+              "accept": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "g_interfaces": [
+    {
+      "ifindex": 1,
+      "ifname": "lo",
+      "flags": [
+        "LOOPBACK",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 65536,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "loopback",
+      "address": "00:00:00:00:00:00",
+      "broadcast": "00:00:00:00:00:00"
+    },
+    {
+      "ifindex": 2,
+      "link_index": 3,
+      "ifname": "nodeg",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "noqueue",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "b6:c7:68:05:14:be",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "link_netnsid": 0
+    }
+  ],
+  "g_routes": [
+    {
+      "dst": "default",
+      "gateway": "10.77.0.1",
+      "dev": "nodeg",
+      "flags": []
+    },
+    {
+      "dst": "10.77.0.0/24",
+      "dev": "nodeg",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "10.77.0.2",
+      "flags": []
+    }
+  ],
+  "checks": {
+    "attack_paths_exist_before": true,
+    "relay_reaches_protected_before": true,
+    "direct_and_relay_blocked_after": true,
+    "existing_session_blocked": true,
+    "each_monitor_and_alert_event_under_2s": true,
+    "controller_absence_keeps_denies": true,
+    "quarantine_breaks_functions": true,
+    "no_alternate_client_interface": true
+  },
+  "recorded_at": "2026-10-03T16:38:03.776086+00:00",
+  "code_commit": "c70d693fad024a08bdeb3018b7e22c9d47ffbc1a",
+  "working_tree_dirty": false,
+  "image_id": "sha256:75e6a7e4747d80a5415092ef884cd6b89419e8b48bbd28b16f24ba93c02249a6"
+}

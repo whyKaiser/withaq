@@ -1,0 +1,5532 @@
+{
+  "recorded_at": "2026-10-03T16:41:52.032440+00:00",
+  "mode": "synthetic-lab-state-with-optional-real-packet-receipts",
+  "code_commit": "c70d693fad024a08bdeb3018b7e22c9d47ffbc1a",
+  "working_tree_dirty": false,
+  "state": {
+    "version": 46,
+    "mode": "mock",
+    "database": "postgresql",
+    "schema": "0003",
+    "devices": [
+      {
+        "id": "1c247cef-f44c-48d2-90e2-9e2802ba16f7",
+        "label": "G · simulated IoT gateway",
+        "kind": "simulated-gateway",
+        "version": 1
+      },
+      {
+        "id": "4f8c5a48-c5ed-42d7-be4d-2dbb5067b9e9",
+        "label": "G · simulated IoT gateway",
+        "kind": "simulated-gateway",
+        "version": 1
+      },
+      {
+        "id": "0bf12ae7-6a6a-4a9d-96d3-d9072170ed8f",
+        "label": "G · simulated IoT gateway",
+        "kind": "simulated-gateway",
+        "version": 1
+      },
+      {
+        "id": "cfcb0a7e-f435-4142-b6ab-4b5ae1f5659d",
+        "label": "G · simulated IoT gateway",
+        "kind": "simulated-gateway",
+        "version": 1
+      }
+    ],
+    "contracts": [
+      {
+        "id": "3d9d6c87-7486-47e2-abbb-754e2cf11faa",
+        "spec": {
+          "id": "FC1",
+          "name": "Monitoring",
+          "source": "G",
+          "target": "M",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "88b5840c-5b85-4d47-ae74-a516403b0ffa",
+        "spec": {
+          "id": "FC2",
+          "name": "Alert delivery",
+          "source": "G",
+          "target": "A",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "c5bd1479-b25d-4a92-8954-00bb86417614",
+        "spec": {
+          "id": "FC1",
+          "name": "Monitoring",
+          "source": "G",
+          "target": "M",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "c43710e8-7224-4339-84ed-d4d8c5e18a89",
+        "spec": {
+          "id": "FC2",
+          "name": "Alert delivery",
+          "source": "G",
+          "target": "A",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "7ffbb7f8-865e-4f68-9b85-122e494a646d",
+        "spec": {
+          "id": "FC1",
+          "name": "Monitoring",
+          "source": "G",
+          "target": "M",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "58486209-3737-4c53-bd27-8af17214b585",
+        "spec": {
+          "id": "FC2",
+          "name": "Alert delivery",
+          "source": "G",
+          "target": "A",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "3267bce4-c64a-4bba-92d8-d8edd35a4d7d",
+        "spec": {
+          "id": "FC1",
+          "name": "Monitoring",
+          "source": "G",
+          "target": "M",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      },
+      {
+        "id": "d5425523-7f98-4c22-9629-7f155929c487",
+        "spec": {
+          "id": "FC2",
+          "name": "Alert delivery",
+          "source": "G",
+          "target": "A",
+          "critical": true,
+          "owner": "synthetic-lab",
+          "version": 1,
+          "max_age_s": 2.0,
+          "max_latency_s": 2.0,
+          "observed_age_s": 0.1,
+          "observed_latencies_s": [
+            0.1
+          ],
+          "lost_events": 0
+        },
+        "version": 1
+      }
+    ],
+    "snapshots": [
+      {
+        "id": "47347c85-7bd6-4096-91c5-f8d755e4b2dd",
+        "spec": {
+          "id": "separable",
+          "title": "احتواء مع استمرار الوظائف",
+          "description": "مساران للهجوم، ووظيفتا مراقبة وتنبيه مستقلتان عنهما.",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "nodes": [
+            "G",
+            "X",
+            "P",
+            "M",
+            "A"
+          ],
+          "attack_sources": [
+            "G"
+          ],
+          "protected_targets": [
+            "P"
+          ],
+          "actions": [
+            {
+              "id": "a",
+              "label": "Block G–P",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "b",
+              "label": "Block G–X",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "X"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "c",
+              "label": "Isolate G",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "d",
+              "label": "Block X–P",
+              "cost": 2,
+              "blocks": [
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "declared",
+              "attack_edges": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "function_edges": [
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "contracts": [
+                {
+                  "id": "FC1",
+                  "name": "Monitoring",
+                  "source": "G",
+                  "target": "M",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC2",
+                  "name": "Alert delivery",
+                  "source": "G",
+                  "target": "A",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                }
+              ]
+            }
+          ],
+          "evidence_complete": true
+        },
+        "hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "version": 1
+      },
+      {
+        "id": "4c37b560-04ed-410f-b53c-4b619315180a",
+        "spec": {
+          "id": "separable",
+          "title": "احتواء مع استمرار الوظائف",
+          "description": "مساران للهجوم، ووظيفتا مراقبة وتنبيه مستقلتان عنهما.",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "nodes": [
+            "G",
+            "X",
+            "P",
+            "M",
+            "A"
+          ],
+          "attack_sources": [
+            "G"
+          ],
+          "protected_targets": [
+            "P"
+          ],
+          "actions": [
+            {
+              "id": "a",
+              "label": "Block G–P",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "b",
+              "label": "Block G–X",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "X"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "c",
+              "label": "Isolate G",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "d",
+              "label": "Block X–P",
+              "cost": 2,
+              "blocks": [
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "declared",
+              "attack_edges": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "function_edges": [
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "contracts": [
+                {
+                  "id": "FC1",
+                  "name": "Monitoring",
+                  "source": "G",
+                  "target": "M",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC2",
+                  "name": "Alert delivery",
+                  "source": "G",
+                  "target": "A",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                }
+              ]
+            }
+          ],
+          "evidence_complete": true
+        },
+        "hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "version": 1
+      },
+      {
+        "id": "d0e39d74-0428-4f81-b314-a91514088e13",
+        "spec": {
+          "id": "separable",
+          "title": "احتواء مع استمرار الوظائف",
+          "description": "مساران للهجوم، ووظيفتا مراقبة وتنبيه مستقلتان عنهما.",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "nodes": [
+            "G",
+            "X",
+            "P",
+            "M",
+            "A"
+          ],
+          "attack_sources": [
+            "G"
+          ],
+          "protected_targets": [
+            "P"
+          ],
+          "actions": [
+            {
+              "id": "a",
+              "label": "Block G–P",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "b",
+              "label": "Block G–X",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "X"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "c",
+              "label": "Isolate G",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "d",
+              "label": "Block X–P",
+              "cost": 2,
+              "blocks": [
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "declared",
+              "attack_edges": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "function_edges": [
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "contracts": [
+                {
+                  "id": "FC1",
+                  "name": "Monitoring",
+                  "source": "G",
+                  "target": "M",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC2",
+                  "name": "Alert delivery",
+                  "source": "G",
+                  "target": "A",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                }
+              ]
+            }
+          ],
+          "evidence_complete": true
+        },
+        "hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "version": 1
+      },
+      {
+        "id": "8c828dd5-742f-48dc-9f90-f871aef1af17",
+        "spec": {
+          "id": "bounded-dependency",
+          "title": "اعتماد إضافي معلوم",
+          "description": "تُفحص فرضيتان؛ قد تكون G–X حرجة، فيلزم اختيار مختلف.",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "nodes": [
+            "G",
+            "X",
+            "P",
+            "M",
+            "A"
+          ],
+          "attack_sources": [
+            "G"
+          ],
+          "protected_targets": [
+            "P"
+          ],
+          "actions": [
+            {
+              "id": "a",
+              "label": "Block G–P",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "b",
+              "label": "Block G–X",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "X"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "c",
+              "label": "Isolate G",
+              "cost": 1,
+              "blocks": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "enforceable": true
+            },
+            {
+              "id": "d",
+              "label": "Block X–P",
+              "cost": 2,
+              "blocks": [
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "enforceable": true
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "declared",
+              "attack_edges": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "function_edges": [
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                }
+              ],
+              "contracts": [
+                {
+                  "id": "FC1",
+                  "name": "Monitoring",
+                  "source": "G",
+                  "target": "M",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC2",
+                  "name": "Alert delivery",
+                  "source": "G",
+                  "target": "A",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                }
+              ]
+            },
+            {
+              "id": "relay-is-critical",
+              "attack_edges": [
+                {
+                  "source": "G",
+                  "target": "P"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                },
+                {
+                  "source": "X",
+                  "target": "P"
+                }
+              ],
+              "function_edges": [
+                {
+                  "source": "G",
+                  "target": "M"
+                },
+                {
+                  "source": "G",
+                  "target": "A"
+                },
+                {
+                  "source": "G",
+                  "target": "X"
+                }
+              ],
+              "contracts": [
+                {
+                  "id": "FC1",
+                  "name": "Monitoring",
+                  "source": "G",
+                  "target": "M",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC2",
+                  "name": "Alert delivery",
+                  "source": "G",
+                  "target": "A",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                },
+                {
+                  "id": "FC3",
+                  "name": "Relay dependency",
+                  "source": "G",
+                  "target": "X",
+                  "critical": true,
+                  "owner": "synthetic-lab",
+                  "version": 1,
+                  "max_age_s": 2.0,
+                  "max_latency_s": 2.0,
+                  "observed_age_s": 0.1,
+                  "observed_latencies_s": [
+                    0.1
+                  ],
+                  "lost_events": 0
+                }
+              ]
+            }
+          ],
+          "evidence_complete": true
+        },
+        "hash": "890fd932321f8f0cd88eeddf30c14766151205834a61012ab202d4194a87ba0a",
+        "version": 1
+      }
+    ],
+    "incidents": [
+      {
+        "id": "3b63c264-f9b6-4c97-957c-9aa3aaf916ca",
+        "device_id": "1c247cef-f44c-48d2-90e2-9e2802ba16f7",
+        "snapshot_id": "47347c85-7bd6-4096-91c5-f8d755e4b2dd",
+        "evidence": {
+          "mode": "synthetic",
+          "scenario": "separable"
+        },
+        "version": 1
+      },
+      {
+        "id": "6c98f99e-6e7f-45b5-982f-ac5922448e92",
+        "device_id": "4f8c5a48-c5ed-42d7-be4d-2dbb5067b9e9",
+        "snapshot_id": "4c37b560-04ed-410f-b53c-4b619315180a",
+        "evidence": {
+          "mode": "synthetic",
+          "scenario": "separable"
+        },
+        "version": 1
+      },
+      {
+        "id": "ff4ba521-d123-4dc1-8fd3-d04a67de1904",
+        "device_id": "0bf12ae7-6a6a-4a9d-96d3-d9072170ed8f",
+        "snapshot_id": "d0e39d74-0428-4f81-b314-a91514088e13",
+        "evidence": {
+          "mode": "synthetic",
+          "scenario": "separable"
+        },
+        "version": 1
+      },
+      {
+        "id": "3340d0b3-e617-4528-a26a-8edee0804e93",
+        "device_id": "cfcb0a7e-f435-4142-b6ab-4b5ae1f5659d",
+        "snapshot_id": "8c828dd5-742f-48dc-9f90-f871aef1af17",
+        "evidence": {
+          "mode": "synthetic",
+          "scenario": "bounded-dependency"
+        },
+        "version": 1
+      }
+    ],
+    "plans": [
+      {
+        "id": "e3e46cea-3323-4b3d-9436-5234283a6e10",
+        "incident_id": "3b63c264-f9b6-4c97-957c-9aa3aaf916ca",
+        "snapshot_id": "47347c85-7bd6-4096-91c5-f8d755e4b2dd",
+        "candidate": {
+          "snapshot_id": "separable",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "status": "OPTIMAL",
+          "actions": [
+            "a",
+            "b"
+          ],
+          "cost": 2,
+          "examined": 16,
+          "feasible_count": 3,
+          "reason": "Complete finite search; optimum only within this model."
+        },
+        "hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "status": "OPTIMAL",
+        "version": 2
+      },
+      {
+        "id": "d760c70c-7d6f-49e9-a0ce-f9081e3f7af3",
+        "incident_id": "6c98f99e-6e7f-45b5-982f-ac5922448e92",
+        "snapshot_id": "4c37b560-04ed-410f-b53c-4b619315180a",
+        "candidate": {
+          "snapshot_id": "separable",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "status": "OPTIMAL",
+          "actions": [
+            "a",
+            "b"
+          ],
+          "cost": 2,
+          "examined": 16,
+          "feasible_count": 3,
+          "reason": "Complete finite search; optimum only within this model."
+        },
+        "hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "status": "OPTIMAL",
+        "version": 2
+      },
+      {
+        "id": "f0f4e66c-2387-45bf-8203-638c85d68949",
+        "incident_id": "ff4ba521-d123-4dc1-8fd3-d04a67de1904",
+        "snapshot_id": "d0e39d74-0428-4f81-b314-a91514088e13",
+        "candidate": {
+          "snapshot_id": "separable",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "status": "OPTIMAL",
+          "actions": [
+            "a",
+            "b"
+          ],
+          "cost": 2,
+          "examined": 16,
+          "feasible_count": 3,
+          "reason": "Complete finite search; optimum only within this model."
+        },
+        "hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "status": "OPTIMAL",
+        "version": 2
+      },
+      {
+        "id": "7de30ce7-1a28-4bd8-a9fd-0a32647618ec",
+        "incident_id": "3340d0b3-e617-4528-a26a-8edee0804e93",
+        "snapshot_id": "8c828dd5-742f-48dc-9f90-f871aef1af17",
+        "candidate": {
+          "snapshot_id": "bounded-dependency",
+          "revision": 1,
+          "policy_version": 1,
+          "capability_version": 1,
+          "status": "OPTIMAL",
+          "actions": [
+            "a",
+            "d"
+          ],
+          "cost": 3,
+          "examined": 16,
+          "feasible_count": 1,
+          "reason": "Complete finite search; optimum only within this model."
+        },
+        "hash": "9de2789e0e5913b43a4e6b1fbdfe6350796472a922768ab1dedd837b8e6ea09a",
+        "status": "OPTIMAL",
+        "version": 2
+      }
+    ],
+    "reports": [
+      {
+        "id": "2a964645-08ee-4815-a199-09d0699ffb6b",
+        "plan_id": "e3e46cea-3323-4b3d-9436-5234283a6e10",
+        "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "verdict": {
+          "accepted": true,
+          "reasons": [],
+          "attack_blocked": true,
+          "contracts": {
+            "declared:FC1": true,
+            "declared:FC2": true
+          }
+        }
+      },
+      {
+        "id": "cd3997b0-d2a6-4331-a9fb-a2fd754ed4dc",
+        "plan_id": "d760c70c-7d6f-49e9-a0ce-f9081e3f7af3",
+        "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "verdict": {
+          "accepted": true,
+          "reasons": [],
+          "attack_blocked": true,
+          "contracts": {
+            "declared:FC1": true,
+            "declared:FC2": true
+          }
+        }
+      },
+      {
+        "id": "f673995e-1979-4452-8ebb-0f5fd774787a",
+        "plan_id": "7de30ce7-1a28-4bd8-a9fd-0a32647618ec",
+        "snapshot_hash": "890fd932321f8f0cd88eeddf30c14766151205834a61012ab202d4194a87ba0a",
+        "plan_hash": "9de2789e0e5913b43a4e6b1fbdfe6350796472a922768ab1dedd837b8e6ea09a",
+        "verdict": {
+          "accepted": true,
+          "reasons": [],
+          "attack_blocked": true,
+          "contracts": {
+            "declared:FC1": true,
+            "declared:FC2": true,
+            "relay-is-critical:FC1": true,
+            "relay-is-critical:FC2": true,
+            "relay-is-critical:FC3": true
+          }
+        }
+      },
+      {
+        "id": "fed175a4-e38f-4fce-86ad-7b5b5daabe8a",
+        "plan_id": "f0f4e66c-2387-45bf-8203-638c85d68949",
+        "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+        "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+        "verdict": {
+          "accepted": true,
+          "reasons": [],
+          "attack_blocked": true,
+          "contracts": {
+            "declared:FC1": true,
+            "declared:FC2": true
+          }
+        }
+      }
+    ],
+    "enforcements": [
+      {
+        "id": "ff65c9eb-8bd7-467e-9e89-a9d74d941c1e",
+        "plan_id": "e3e46cea-3323-4b3d-9436-5234283a6e10",
+        "status": "SIMULATED_CONFIRMED",
+        "result": {
+          "status": "SIMULATED_CONFIRMED",
+          "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+          "actions": [
+            "a",
+            "b"
+          ],
+          "measured_packets": false
+        },
+        "version": 2
+      },
+      {
+        "id": "c37ff6c2-a605-4b6d-97fd-e4a15b9bde80",
+        "plan_id": "d760c70c-7d6f-49e9-a0ce-f9081e3f7af3",
+        "status": "LAB_CONFIRMED",
+        "result": {
+          "receipt": {
+            "status": "LAB_CONFIRMED",
+            "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+            "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+            "actions": [
+              "a",
+              "b"
+            ],
+            "measured_packets": true,
+            "contracts": {
+              "declared:FC1": true,
+              "declared:FC2": true
+            },
+            "evidence": {
+              "mode": "isolated-container-packets",
+              "synthetic_devices": true,
+              "host_firewall_modified": false,
+              "topology": "G/X/P/M/A through one PEP; X is an application relay",
+              "cases": {
+                "before": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00016736984252929688,
+                        "latency_s": 0.01451112299992019
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.512901306152344e-05,
+                        "latency_s": 0.0005364710000321793
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.369850158691406e-05,
+                        "latency_s": 0.0004986769999959506
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.724761962890625e-05,
+                        "latency_s": 0.00040912900021794485
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0004093647003173828,
+                        "latency_s": 0.0009974540002986032
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0023956298828125,
+                        "latency_s": 0.004694445000041014
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0006961822509765625,
+                        "latency_s": 0.0010949180000352499
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005590915679931641,
+                        "latency_s": 0.000867568000103347
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0006389617919921875,
+                        "latency_s": 0.000935186999868165
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005431175231933594,
+                        "latency_s": 0.0008522359999005857
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00013875961303710938,
+                        "latency_s": 0.0023371339998448093
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012087821960449219,
+                        "latency_s": 0.0005398700000114331
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.273124694824219e-05,
+                        "latency_s": 0.00042891099974440294
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.703636169433594e-05,
+                        "latency_s": 0.0004105410002921417
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.250640869140625e-05,
+                        "latency_s": 0.0004900010003439093
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0002562999725341797,
+                        "latency_s": 0.0024348599999939324
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001227855682373047,
+                        "latency_s": 0.0006948230002308264
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.298324584960938e-05,
+                        "latency_s": 0.0006274409997786279
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.274482727050781e-05,
+                        "latency_s": 0.0005297430002428882
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010204315185546875,
+                        "latency_s": 0.0005903020000914694
+                      }
+                    ]
+                  }
+                },
+                "established_after": {
+                  "records": [
+                    {
+                      "sequence": 1,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40062252100005935
+                    },
+                    {
+                      "sequence": 2,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40056381700014754
+                    },
+                    {
+                      "sequence": 3,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4005629910002426
+                    },
+                    {
+                      "sequence": 4,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40063207000002876
+                    },
+                    {
+                      "sequence": 5,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4005688170000212
+                    }
+                  ]
+                },
+                "mfsc_after": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4019439720000264
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40060974300013186
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.400639763000072
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007438420003382
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40068005700004505
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40191100199990615
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007258860001457
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40084766599966315
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40071472499994343
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007745569997496
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010180473327636719,
+                        "latency_s": 0.0018336699999963457
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.821487426757812e-05,
+                        "latency_s": 0.0004918399999951362
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.893013000488281e-05,
+                        "latency_s": 0.0003673569999591564
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.225440979003906e-05,
+                        "latency_s": 0.00043833700010509347
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.225440979003906e-05,
+                        "latency_s": 0.00036094000006414717
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001347064971923828,
+                        "latency_s": 0.0022137109999675886
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.250640869140625e-05,
+                        "latency_s": 0.0004835620002268115
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010132789611816406,
+                        "latency_s": 0.0005520810000234633
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.775161743164062e-05,
+                        "latency_s": 0.0004815969996343483
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.679794311523438e-05,
+                        "latency_s": 0.00046133799969538813
+                      }
+                    ]
+                  }
+                },
+                "controller_absent": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40212739199978387
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40071848999969006
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40075922200003333
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40073438500030534
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40066741999999067
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00013327598571777344,
+                        "latency_s": 0.0020660029999817198
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001010894775390625,
+                        "latency_s": 0.00046613399990746984
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.225440979003906e-05,
+                        "latency_s": 0.0004303839996282477
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.630752563476562e-05,
+                        "latency_s": 0.0004031299999951443
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.535385131835938e-05,
+                        "latency_s": 0.0003774540000449633
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012302398681640625,
+                        "latency_s": 0.002159534999918833
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.584426879882812e-05,
+                        "latency_s": 0.00045891000036135665
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012040138244628906,
+                        "latency_s": 0.00048329199989893823
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.751319885253906e-05,
+                        "latency_s": 0.0004714209999292507
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.416175842285156e-05,
+                        "latency_s": 0.0004057670003021485
+                      }
+                    ]
+                  }
+                },
+                "full_quarantine": {
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40204786599997533
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006546310001795
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40080463499998586
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006531680001899
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40064444200015714
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40190739099989514
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40060020200007784
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40065462800021123
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40070230599985734
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006736310002452
+                      }
+                    ]
+                  }
+                }
+              },
+              "applied_actions": [
+                "a",
+                "b"
+              ],
+              "rules": {
+                "nftables": [
+                  {
+                    "metainfo": {
+                      "version": "1.1.3",
+                      "release_name": "Commodore Bullmoose #4",
+                      "json_schema_version": 1
+                    }
+                  },
+                  {
+                    "table": {
+                      "family": "inet",
+                      "name": "withaq_lab",
+                      "handle": 2
+                    }
+                  },
+                  {
+                    "chain": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "name": "forward",
+                      "handle": 1,
+                      "type": "filter",
+                      "hook": "forward",
+                      "prio": 0,
+                      "policy": "drop"
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 2,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 11,
+                            "bytes": 708
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 3,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 4,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 5,
+                            "bytes": 300
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 5,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 6,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "in",
+                            "left": {
+                              "ct": {
+                                "key": "state"
+                              }
+                            },
+                            "right": [
+                              "established",
+                              "related"
+                            ]
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 8,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": {
+                              "set": [
+                                "10.77.1.2",
+                                "10.77.2.2",
+                                "10.77.3.2",
+                                "10.77.4.2"
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 9,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "g_interfaces": [
+                {
+                  "ifindex": 1,
+                  "ifname": "lo",
+                  "flags": [
+                    "LOOPBACK",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 65536,
+                  "qdisc": "noqueue",
+                  "operstate": "UNKNOWN",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "loopback",
+                  "address": "00:00:00:00:00:00",
+                  "broadcast": "00:00:00:00:00:00"
+                },
+                {
+                  "ifindex": 2,
+                  "link_index": 3,
+                  "ifname": "nodeg",
+                  "flags": [
+                    "BROADCAST",
+                    "MULTICAST",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 1500,
+                  "qdisc": "noqueue",
+                  "operstate": "UP",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "ether",
+                  "address": "7a:dc:ad:9d:c4:da",
+                  "broadcast": "ff:ff:ff:ff:ff:ff",
+                  "link_netnsid": 0
+                }
+              ],
+              "g_routes": [
+                {
+                  "dst": "default",
+                  "gateway": "10.77.0.1",
+                  "dev": "nodeg",
+                  "flags": []
+                },
+                {
+                  "dst": "10.77.0.0/24",
+                  "dev": "nodeg",
+                  "protocol": "kernel",
+                  "scope": "link",
+                  "prefsrc": "10.77.0.2",
+                  "flags": []
+                }
+              ],
+              "checks": {
+                "attack_paths_exist_before": true,
+                "relay_reaches_protected_before": true,
+                "direct_and_relay_blocked_after": true,
+                "existing_session_blocked": true,
+                "each_monitor_and_alert_event_under_2s": true,
+                "controller_absence_keeps_denies": true,
+                "quarantine_breaks_functions": true,
+                "no_alternate_client_interface": true
+              }
+            }
+          },
+          "signature": "71d1a2421aaaaf97829d3658c760a961d66883ac7c21731e1a98114fa4b04a32"
+        },
+        "version": 2
+      },
+      {
+        "id": "079e7a08-d12d-4f1d-a844-9c56f2ae055b",
+        "plan_id": "f0f4e66c-2387-45bf-8203-638c85d68949",
+        "status": "LAB_CONFIRMED",
+        "result": {
+          "receipt": {
+            "status": "LAB_CONFIRMED",
+            "plan_hash": "50f4e650f2eecfa5bb8594b325d99105bd054430b001a3fe947ff6c0810869bf",
+            "snapshot_hash": "21644beb750e0db65b6fd2411fba26a7ba662add586f754b735b235c75ac4bdf",
+            "actions": [
+              "a",
+              "b"
+            ],
+            "measured_packets": true,
+            "contracts": {
+              "declared:FC1": true,
+              "declared:FC2": true
+            },
+            "evidence": {
+              "mode": "isolated-container-packets",
+              "synthetic_devices": true,
+              "host_firewall_modified": false,
+              "topology": "G/X/P/M/A through one PEP; X is an application relay",
+              "cases": {
+                "before": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012874603271484375,
+                        "latency_s": 0.015554376000181946
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010919570922851562,
+                        "latency_s": 0.0005262009999569273
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010657310485839844,
+                        "latency_s": 0.0004453920000742073
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.298324584960938e-05,
+                        "latency_s": 0.0005760340000051656
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011587142944335938,
+                        "latency_s": 0.000565083999390481
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0026464462280273438,
+                        "latency_s": 0.0047444989995710785
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005958080291748047,
+                        "latency_s": 0.000968487999671197
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005927085876464844,
+                        "latency_s": 0.000983725999503804
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005586147308349609,
+                        "latency_s": 0.0009296990001530503
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0006501674652099609,
+                        "latency_s": 0.0009627720000935369
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00013208389282226562,
+                        "latency_s": 0.0022036529999240884
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001251697540283203,
+                        "latency_s": 0.0005076549996374524
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.130073547363281e-05,
+                        "latency_s": 0.0003701630002979073
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.796287536621094e-05,
+                        "latency_s": 0.0004633469998225337
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.869171142578125e-05,
+                        "latency_s": 0.00038100399979157373
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011873245239257812,
+                        "latency_s": 0.001958058000127494
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.726119995117188e-05,
+                        "latency_s": 0.0004315229998610448
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.726119995117188e-05,
+                        "latency_s": 0.0004434470001797308
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.367134094238281e-05,
+                        "latency_s": 0.0003880559997924138
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 6.318092346191406e-05,
+                        "latency_s": 0.00034047600001940737
+                      }
+                    ]
+                  }
+                },
+                "established_after": {
+                  "records": [
+                    {
+                      "sequence": 1,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4005631589998302
+                    },
+                    {
+                      "sequence": 2,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4006419449997338
+                    },
+                    {
+                      "sequence": 3,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4006489519997558
+                    },
+                    {
+                      "sequence": 4,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40052150200062897
+                    },
+                    {
+                      "sequence": 5,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40060573699975066
+                    }
+                  ]
+                },
+                "mfsc_after": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4031727249994219
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006874710003103
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006976799992117
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40060541100046976
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006851080002889
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4020420440001544
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40067107399954693
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.400748220999958
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40064276000066457
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40074725299928105
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012230873107910156,
+                        "latency_s": 0.0018152020002162317
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00017333030700683594,
+                        "latency_s": 0.0005274289997032611
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.179115295410156e-05,
+                        "latency_s": 0.0005429659995570546
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.416175842285156e-05,
+                        "latency_s": 0.00044564200015884126
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 6.699562072753906e-05,
+                        "latency_s": 0.00032767100037744967
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011730194091796875,
+                        "latency_s": 0.0019122460007565678
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001938343048095703,
+                        "latency_s": 0.0007992680002644192
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00013065338134765625,
+                        "latency_s": 0.0004961889999322011
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.893013000488281e-05,
+                        "latency_s": 0.00046514099994965363
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 5.9604644775390625e-05,
+                        "latency_s": 0.0003861010000036913
+                      }
+                    ]
+                  }
+                },
+                "controller_absent": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40271716699953686
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40075483600048756
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007653789994947
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40074592899964046
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40084594400013884
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.000186920166015625,
+                        "latency_s": 0.002026296999247279
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001513957977294922,
+                        "latency_s": 0.00047831099982431624
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.463859558105469e-05,
+                        "latency_s": 0.00039939999987836927
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.560585021972656e-05,
+                        "latency_s": 0.0003846379995593452
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.130073547363281e-05,
+                        "latency_s": 0.0003856819994325633
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001666545867919922,
+                        "latency_s": 0.002222705999884056
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.298324584960938e-05,
+                        "latency_s": 0.0004359049999038689
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.605552673339844e-05,
+                        "latency_s": 0.00048132400024769595
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.939338684082031e-05,
+                        "latency_s": 0.0003771250003410387
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.845329284667969e-05,
+                        "latency_s": 0.0003743879997273325
+                      }
+                    ]
+                  }
+                },
+                "full_quarantine": {
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40215454200006207
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006923139995706
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40068518799944286
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007327420004003
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007122730008632
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4018026940002528
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007390039996608
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006896040000356
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007070650004607
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4008161680003468
+                      }
+                    ]
+                  }
+                }
+              },
+              "runtime": {
+                "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+                "kernel": "6.18.33.2-microsoft-standard-WSL2",
+                "nftables": "nftables v1.1.3 (Commodore Bullmoose #4)",
+                "iproute2": "ip utility, iproute2-6.15.0, libbpf 1.5.0"
+              },
+              "applied_actions": [
+                "a",
+                "b"
+              ],
+              "rules": {
+                "nftables": [
+                  {
+                    "metainfo": {
+                      "version": "1.1.3",
+                      "release_name": "Commodore Bullmoose #4",
+                      "json_schema_version": 1
+                    }
+                  },
+                  {
+                    "table": {
+                      "family": "inet",
+                      "name": "withaq_lab",
+                      "handle": 2
+                    }
+                  },
+                  {
+                    "chain": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "name": "forward",
+                      "handle": 1,
+                      "type": "filter",
+                      "hook": "forward",
+                      "prio": 0,
+                      "policy": "drop"
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 2,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 11,
+                            "bytes": 708
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 3,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 4,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 5,
+                            "bytes": 300
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 5,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 6,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "in",
+                            "left": {
+                              "ct": {
+                                "key": "state"
+                              }
+                            },
+                            "right": [
+                              "established",
+                              "related"
+                            ]
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 8,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": {
+                              "set": [
+                                "10.77.1.2",
+                                "10.77.2.2",
+                                "10.77.3.2",
+                                "10.77.4.2"
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 9,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "g_interfaces": [
+                {
+                  "ifindex": 1,
+                  "ifname": "lo",
+                  "flags": [
+                    "LOOPBACK",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 65536,
+                  "qdisc": "noqueue",
+                  "operstate": "UNKNOWN",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "loopback",
+                  "address": "00:00:00:00:00:00",
+                  "broadcast": "00:00:00:00:00:00"
+                },
+                {
+                  "ifindex": 2,
+                  "link_index": 3,
+                  "ifname": "nodeg",
+                  "flags": [
+                    "BROADCAST",
+                    "MULTICAST",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 1500,
+                  "qdisc": "noqueue",
+                  "operstate": "UP",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "ether",
+                  "address": "fe:3f:49:c9:30:71",
+                  "broadcast": "ff:ff:ff:ff:ff:ff",
+                  "link_netnsid": 0
+                }
+              ],
+              "g_routes": [
+                {
+                  "dst": "default",
+                  "gateway": "10.77.0.1",
+                  "dev": "nodeg",
+                  "flags": []
+                },
+                {
+                  "dst": "10.77.0.0/24",
+                  "dev": "nodeg",
+                  "protocol": "kernel",
+                  "scope": "link",
+                  "prefsrc": "10.77.0.2",
+                  "flags": []
+                }
+              ],
+              "checks": {
+                "attack_paths_exist_before": true,
+                "relay_reaches_protected_before": true,
+                "direct_and_relay_blocked_after": true,
+                "existing_session_blocked": true,
+                "each_monitor_and_alert_event_under_2s": true,
+                "controller_absence_keeps_denies": true,
+                "quarantine_breaks_functions": true,
+                "no_alternate_client_interface": true
+              }
+            }
+          },
+          "signature": "1280b1251153f2eb190bdb5b2e1ebbcf53a3b819ae50c9bb7e524ce982597bec"
+        },
+        "version": 2
+      },
+      {
+        "id": "c1f58871-2649-40c0-b37c-2e51b1079ec7",
+        "plan_id": "7de30ce7-1a28-4bd8-a9fd-0a32647618ec",
+        "status": "LAB_CONFIRMED",
+        "result": {
+          "receipt": {
+            "status": "LAB_CONFIRMED",
+            "plan_hash": "9de2789e0e5913b43a4e6b1fbdfe6350796472a922768ab1dedd837b8e6ea09a",
+            "snapshot_hash": "890fd932321f8f0cd88eeddf30c14766151205834a61012ab202d4194a87ba0a",
+            "actions": [
+              "a",
+              "d"
+            ],
+            "measured_packets": true,
+            "contracts": {
+              "declared:FC1": true,
+              "declared:FC2": true,
+              "relay-is-critical:FC1": true,
+              "relay-is-critical:FC2": true,
+              "relay-is-critical:FC3": true
+            },
+            "evidence": {
+              "mode": "isolated-container-packets",
+              "synthetic_devices": true,
+              "host_firewall_modified": false,
+              "topology": "G/X/P/M/A through one PEP; X is an application relay",
+              "cases": {
+                "before": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00015926361083984375,
+                        "latency_s": 0.01167755699952977
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011777877807617188,
+                        "latency_s": 0.0005364640001062071
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.177757263183594e-05,
+                        "latency_s": 0.0004105750003873254
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010991096496582031,
+                        "latency_s": 0.00036894700042466866
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.271766662597656e-05,
+                        "latency_s": 0.0003538390001267544
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0024788379669189453,
+                        "latency_s": 0.004919216000416782
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0007092952728271484,
+                        "latency_s": 0.0010854980000658543
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0006933212280273438,
+                        "latency_s": 0.0010293109999111039
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0006542205810546875,
+                        "latency_s": 0.001081417000023066
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": true,
+                        "freshness_s": 0.0005793571472167969,
+                        "latency_s": 0.0009070779997273348
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00014519691467285156,
+                        "latency_s": 0.0026415980000820127
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00014734268188476562,
+                        "latency_s": 0.0007359660003203317
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010180473327636719,
+                        "latency_s": 0.000431449999268807
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.608268737792969e-05,
+                        "latency_s": 0.0004652329998862115
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.654594421386719e-05,
+                        "latency_s": 0.00047754299976077164
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00014638900756835938,
+                        "latency_s": 0.0025026799994520843
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00010657310485839844,
+                        "latency_s": 0.0005729060003432096
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.416175842285156e-05,
+                        "latency_s": 0.00037026999962108675
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.630752563476562e-05,
+                        "latency_s": 0.00039664399992034305
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.893013000488281e-05,
+                        "latency_s": 0.0004330199999458273
+                      }
+                    ]
+                  }
+                },
+                "established_after": {
+                  "records": [
+                    {
+                      "sequence": 1,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4006078100001105
+                    },
+                    {
+                      "sequence": 2,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40059181800006627
+                    },
+                    {
+                      "sequence": 3,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40056779499991535
+                    },
+                    {
+                      "sequence": 4,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.4005380520002291
+                    },
+                    {
+                      "sequence": 5,
+                      "mode": "established",
+                      "delivered": false,
+                      "latency_s": 0.40058016600050905
+                    }
+                  ]
+                },
+                "mfsc_after": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40193629399982456
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006589399996301
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40069527800005744
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40066065800056094
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40073612599917396
+                      }
+                    ]
+                  },
+                  "x": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": false,
+                        "freshness_s": 0.3009638786315918,
+                        "latency_s": 0.3028777790004824
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": false,
+                        "freshness_s": 0.3008406162261963,
+                        "latency_s": 0.301270594000016
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": false,
+                        "freshness_s": 0.30081748962402344,
+                        "latency_s": 0.3013526750000892
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": false,
+                        "freshness_s": 0.3009302616119385,
+                        "latency_s": 0.30142187099954754
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": false,
+                        "freshness_s": 0.30086684226989746,
+                        "latency_s": 0.30125266300001385
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011920928955078125,
+                        "latency_s": 0.001897099999951024
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 7.152557373046875e-05,
+                        "latency_s": 0.0003638850002971594
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.988380432128906e-05,
+                        "latency_s": 0.00040745300066191703
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001735687255859375,
+                        "latency_s": 0.00044925899965164717
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00011157989501953125,
+                        "latency_s": 0.0005705809999199118
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001811981201171875,
+                        "latency_s": 0.002372486999774992
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012969970703125,
+                        "latency_s": 0.0006403699999282253
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.679794311523438e-05,
+                        "latency_s": 0.0004291770001145778
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00020551681518554688,
+                        "latency_s": 0.0005393030005507171
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.893013000488281e-05,
+                        "latency_s": 0.0005368069996620761
+                      }
+                    ]
+                  }
+                },
+                "controller_absent": {
+                  "p": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40221420299985766
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40064171299945883
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40072870800031524
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40068449699992925
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40071900300063135
+                      }
+                    ]
+                  },
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012922286987304688,
+                        "latency_s": 0.0020015620002595824
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.846687316894531e-05,
+                        "latency_s": 0.0004607310002029408
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.417533874511719e-05,
+                        "latency_s": 0.00042247100009262795
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.0001125335693359375,
+                        "latency_s": 0.0004208899999866844
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.7738037109375e-05,
+                        "latency_s": 0.0005523370000446448
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 0.00012421607971191406,
+                        "latency_s": 0.0019403100004637963
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.799003601074219e-05,
+                        "latency_s": 0.000453640000159794
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 8.296966552734375e-05,
+                        "latency_s": 0.0003485709994492936
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 9.226799011230469e-05,
+                        "latency_s": 0.00035442399985186057
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": true,
+                        "protected_reached": null,
+                        "freshness_s": 6.794929504394531e-05,
+                        "latency_s": 0.00035508400014805375
+                      }
+                    ]
+                  }
+                },
+                "full_quarantine": {
+                  "m": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40201993600021524
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006989829995291
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40076550399953703
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40065515200058144
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40070899199963605
+                      }
+                    ]
+                  },
+                  "a": {
+                    "records": [
+                      {
+                        "sequence": 1,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40191253000011784
+                      },
+                      {
+                        "sequence": 2,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4007438540002113
+                      },
+                      {
+                        "sequence": 3,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006972600000154
+                      },
+                      {
+                        "sequence": 4,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.4006373279999025
+                      },
+                      {
+                        "sequence": 5,
+                        "mode": "new",
+                        "delivered": false,
+                        "latency_s": 0.40078781000011077
+                      }
+                    ]
+                  }
+                }
+              },
+              "runtime": {
+                "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+                "kernel": "6.18.33.2-microsoft-standard-WSL2",
+                "nftables": "nftables v1.1.3 (Commodore Bullmoose #4)",
+                "iproute2": "ip utility, iproute2-6.15.0, libbpf 1.5.0"
+              },
+              "applied_actions": [
+                "a",
+                "d"
+              ],
+              "rules": {
+                "nftables": [
+                  {
+                    "metainfo": {
+                      "version": "1.1.3",
+                      "release_name": "Commodore Bullmoose #4",
+                      "json_schema_version": 1
+                    }
+                  },
+                  {
+                    "table": {
+                      "family": "inet",
+                      "name": "withaq_lab",
+                      "handle": 2
+                    }
+                  },
+                  {
+                    "chain": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "name": "forward",
+                      "handle": 1,
+                      "type": "filter",
+                      "hook": "forward",
+                      "prio": 0,
+                      "policy": "drop"
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 2,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 11,
+                            "bytes": 708
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 3,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 4,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 5,
+                            "bytes": 300
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 5,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "counter": {
+                            "packets": 0,
+                            "bytes": 0
+                          }
+                        },
+                        {
+                          "drop": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 6,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "in",
+                            "left": {
+                              "ct": {
+                                "key": "state"
+                              }
+                            },
+                            "right": [
+                              "established",
+                              "related"
+                            ]
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 8,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.0.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": {
+                              "set": [
+                                "10.77.1.2",
+                                "10.77.2.2",
+                                "10.77.3.2",
+                                "10.77.4.2"
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "rule": {
+                      "family": "inet",
+                      "table": "withaq_lab",
+                      "chain": "forward",
+                      "handle": 9,
+                      "expr": [
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "saddr"
+                              }
+                            },
+                            "right": "10.77.2.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "ip",
+                                "field": "daddr"
+                              }
+                            },
+                            "right": "10.77.1.2"
+                          }
+                        },
+                        {
+                          "match": {
+                            "op": "==",
+                            "left": {
+                              "payload": {
+                                "protocol": "tcp",
+                                "field": "dport"
+                              }
+                            },
+                            "right": 9300
+                          }
+                        },
+                        {
+                          "accept": null
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "g_interfaces": [
+                {
+                  "ifindex": 1,
+                  "ifname": "lo",
+                  "flags": [
+                    "LOOPBACK",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 65536,
+                  "qdisc": "noqueue",
+                  "operstate": "UNKNOWN",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "loopback",
+                  "address": "00:00:00:00:00:00",
+                  "broadcast": "00:00:00:00:00:00"
+                },
+                {
+                  "ifindex": 2,
+                  "link_index": 3,
+                  "ifname": "nodeg",
+                  "flags": [
+                    "BROADCAST",
+                    "MULTICAST",
+                    "UP",
+                    "LOWER_UP"
+                  ],
+                  "mtu": 1500,
+                  "qdisc": "noqueue",
+                  "operstate": "UP",
+                  "linkmode": "DEFAULT",
+                  "group": "default",
+                  "txqlen": 1000,
+                  "link_type": "ether",
+                  "address": "ca:61:42:32:5c:0b",
+                  "broadcast": "ff:ff:ff:ff:ff:ff",
+                  "link_netnsid": 0
+                }
+              ],
+              "g_routes": [
+                {
+                  "dst": "default",
+                  "gateway": "10.77.0.1",
+                  "dev": "nodeg",
+                  "flags": []
+                },
+                {
+                  "dst": "10.77.0.0/24",
+                  "dev": "nodeg",
+                  "protocol": "kernel",
+                  "scope": "link",
+                  "prefsrc": "10.77.0.2",
+                  "flags": []
+                }
+              ],
+              "checks": {
+                "attack_paths_exist_before": true,
+                "relay_reaches_protected_before": true,
+                "direct_and_relay_blocked_after": true,
+                "existing_session_blocked": true,
+                "each_monitor_and_alert_event_under_2s": true,
+                "controller_absence_keeps_denies": true,
+                "quarantine_breaks_functions": true,
+                "no_alternate_client_interface": true
+              }
+            }
+          },
+          "signature": "2f34c68a1fc719b56d5201051a9794ae92554258e04ba532ff65f7a345c61239"
+        },
+        "version": 2
+      }
+    ],
+    "roots": [
+      {
+        "id": "c690e7b8-1832-42fa-a908-34f3c965dc7e",
+        "label": "S1 · compromised batch",
+        "status": "REVOKED",
+        "version": 2
+      },
+      {
+        "id": "ed63afaf-e86b-4b78-9063-7ac9fef0a242",
+        "label": "S2 · independent alternative",
+        "status": "ACTIVE",
+        "version": 1
+      },
+      {
+        "id": "620e4999-6871-4efe-b5c3-d77c4556a769",
+        "label": "S3 · independent report",
+        "status": "ACTIVE",
+        "version": 1
+      },
+      {
+        "id": "e651b678-23b2-4b0c-a6f7-55532cbccc10",
+        "label": "UI race source",
+        "status": "REVOKED",
+        "version": 2
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+        "label": "T1 · monitoring input",
+        "hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc",
+        "lineage_complete": 1,
+        "status": "REVOKED",
+        "created_at": 1791041420.3100705,
+        "roots": {
+          "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+        },
+        "parents": []
+      },
+      {
+        "id": "9aa4d876-7dc0-43f6-b44f-1a0e8c70951c",
+        "label": "S2 · approved rebuild input",
+        "hash": "70674cf0954c67d13665ec0d65b3aca939020d735e25fdba45d1113b9e8098ec",
+        "lineage_complete": 1,
+        "status": "ACTIVE",
+        "created_at": 1791041420.3690355,
+        "roots": {
+          "ed63afaf-e86b-4b78-9063-7ac9fef0a242": 1
+        },
+        "parents": []
+      },
+      {
+        "id": "becea97d-ef59-4ae3-b593-c417a82754b3",
+        "label": "T3 · independent report",
+        "hash": "1da5099f52ebff06bb2f3a8fe16f3558f9c0bc8268cb4ae3825505c4e3455b60",
+        "lineage_complete": 1,
+        "status": "ACTIVE",
+        "created_at": 1791041420.4482021,
+        "roots": {
+          "620e4999-6871-4efe-b5c3-d77c4556a769": 1
+        },
+        "parents": []
+      },
+      {
+        "id": "636d7b22-1186-42f9-951f-b2efbf197da7",
+        "label": "C-D · unknown lineage",
+        "hash": "0bc4a37b32ff50bdfb0aa5af71f2d87395073655291c029c9c5983683aa96cc6",
+        "lineage_complete": 0,
+        "status": "HELD",
+        "created_at": 1791041420.5168686,
+        "roots": {},
+        "parents": []
+      },
+      {
+        "id": "71ca8e02-b4d5-4599-b7cf-63f87913173d",
+        "label": "T2 · derived summary",
+        "hash": "6a45719f7feeddb8768aabd956923f77a503ab1e0b298546fdec5a3c8d328a78",
+        "lineage_complete": 1,
+        "status": "REVOKED",
+        "created_at": 1791041420.6902301,
+        "roots": {
+          "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+        },
+        "parents": [
+          "5d84d4e2-6785-4811-9076-3d1d6515767d"
+        ]
+      },
+      {
+        "id": "9e4a3ce1-96a3-479d-8485-890a2c0a13f5",
+        "label": "Derived summary",
+        "hash": "6a45719f7feeddb8768aabd956923f77a503ab1e0b298546fdec5a3c8d328a78",
+        "lineage_complete": 1,
+        "status": "REVOKED",
+        "created_at": 1791043357.1350892,
+        "roots": {
+          "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+        },
+        "parents": [
+          "5d84d4e2-6785-4811-9076-3d1d6515767d"
+        ]
+      },
+      {
+        "id": "0dee189d-de02-49a1-929a-3343c790d57e",
+        "label": "UI race source",
+        "hash": "ada3b63c17687d6605108cb07a8dcd5af71b803827bdfd691d4dc74facefc5d6",
+        "lineage_complete": 1,
+        "status": "REVOKED",
+        "created_at": 1791043407.436479,
+        "roots": {
+          "e651b678-23b2-4b0c-a6f7-55532cbccc10": 1
+        },
+        "parents": []
+      },
+      {
+        "id": "52720bef-f946-4741-9912-76f8d7dca4d6",
+        "label": "T2b · rebuilt from independent inputs",
+        "hash": "ecae75ab7371a7c2d7b13fe9618c056bd568815fa2c1305817aa3a35732a2e3e",
+        "lineage_complete": 1,
+        "status": "ACTIVE",
+        "created_at": 1791043623.0542655,
+        "roots": {
+          "ed63afaf-e86b-4b78-9063-7ac9fef0a242": 1
+        },
+        "parents": [
+          "9aa4d876-7dc0-43f6-b44f-1a0e8c70951c"
+        ]
+      }
+    ],
+    "runs": [
+      {
+        "id": "2b7547fc-d7bf-4336-b098-f0c0a4e6523b",
+        "manifest_id": "32af1419-f632-438b-8dcf-b8c3b084ad9c",
+        "task": "summary",
+        "label": "T2 · derived summary",
+        "status": "PUBLISHED",
+        "output_id": "71ca8e02-b4d5-4599-b7cf-63f87913173d",
+        "reason": null,
+        "version": 2
+      },
+      {
+        "id": "b74199b7-16ed-45ba-9c49-c2b3831f25a1",
+        "manifest_id": "8b48c4a9-db93-4969-92d4-a0cefc239672",
+        "task": "summary",
+        "label": "Derived summary",
+        "status": "PUBLISHED",
+        "output_id": "9e4a3ce1-96a3-479d-8485-890a2c0a13f5",
+        "reason": null,
+        "version": 2
+      },
+      {
+        "id": "da285ad4-1ae9-4e46-9eeb-bb7d0519bd48",
+        "manifest_id": "88891d8a-6421-4897-9a7e-e94a757223f0",
+        "task": "summary",
+        "label": "Derived summary",
+        "status": "REJECTED",
+        "output_id": null,
+        "reason": "ROOT_REVOKED",
+        "version": 1
+      },
+      {
+        "id": "e738c827-6ebf-472c-8c11-7ad9ce3c582b",
+        "manifest_id": "8a329104-15f8-4e38-bdc5-c1e13907690a",
+        "task": "recovery",
+        "label": "T2b · rebuilt from independent inputs",
+        "status": "PUBLISHED",
+        "output_id": "52720bef-f946-4741-9912-76f8d7dca4d6",
+        "reason": null,
+        "version": 2
+      }
+    ],
+    "manifests": [
+      {
+        "id": "32af1419-f632-438b-8dcf-b8c3b084ad9c",
+        "sealed": {
+          "inputs": [
+            {
+              "artifact_id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+              "role": "source",
+              "hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc"
+            }
+          ],
+          "roots": {
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+          },
+          "task": "summary",
+          "replacement_for": null,
+          "provider": "mock",
+          "hidden_inputs": false
+        },
+        "hash": "f7d6204591ab17c273f8e4970cf23651223a7d6be17d02d51b38c128cfc2dbc0"
+      },
+      {
+        "id": "88891d8a-6421-4897-9a7e-e94a757223f0",
+        "sealed": {
+          "inputs": [
+            {
+              "artifact_id": "0dee189d-de02-49a1-929a-3343c790d57e",
+              "role": "source",
+              "hash": "ada3b63c17687d6605108cb07a8dcd5af71b803827bdfd691d4dc74facefc5d6"
+            }
+          ],
+          "roots": {
+            "e651b678-23b2-4b0c-a6f7-55532cbccc10": 1
+          },
+          "task": "summary",
+          "replacement_for": null,
+          "provider": "mock",
+          "hidden_inputs": false,
+          "delay_s": 5.0
+        },
+        "hash": "0f19de09efae93cc4aef9a66aa027153a847f3024d73ac1e9a4e508e5f7e4428"
+      },
+      {
+        "id": "8a329104-15f8-4e38-bdc5-c1e13907690a",
+        "sealed": {
+          "inputs": [
+            {
+              "artifact_id": "9aa4d876-7dc0-43f6-b44f-1a0e8c70951c",
+              "role": "source",
+              "hash": "70674cf0954c67d13665ec0d65b3aca939020d735e25fdba45d1113b9e8098ec"
+            }
+          ],
+          "roots": {
+            "ed63afaf-e86b-4b78-9063-7ac9fef0a242": 1
+          },
+          "task": "recovery",
+          "replacement_for": "71ca8e02-b4d5-4599-b7cf-63f87913173d",
+          "provider": "mock",
+          "hidden_inputs": false,
+          "delay_s": 0.0
+        },
+        "hash": "8338ceed0b66f07e84493ebd293a43a519499485cd44a8fc52d59906bc782747"
+      },
+      {
+        "id": "8b48c4a9-db93-4969-92d4-a0cefc239672",
+        "sealed": {
+          "inputs": [
+            {
+              "artifact_id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+              "role": "source",
+              "hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc"
+            }
+          ],
+          "roots": {
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+          },
+          "task": "summary",
+          "replacement_for": null,
+          "provider": "mock",
+          "hidden_inputs": false,
+          "delay_s": 5.0
+        },
+        "hash": "2ca4a279f7a09a07310fe137c511bd063e30b037447c064388e6e04ad45c9ba2"
+      }
+    ],
+    "revocations": [
+      {
+        "id": "f8cb290d-192d-4f67-b25b-4a0dcd4bdfec",
+        "root_id": "c690e7b8-1832-42fa-a908-34f3c965dc7e",
+        "barrier_version": 2,
+        "reason": "Synthetic incident: withdraw source authority",
+        "at": 1791043362.8397326
+      },
+      {
+        "id": "42257abd-6cb6-4e2f-9b5a-3aa81517fc74",
+        "root_id": "e651b678-23b2-4b0c-a6f7-55532cbccc10",
+        "barrier_version": 2,
+        "reason": "Synthetic incident: withdraw source authority",
+        "at": 1791043452.262272
+      }
+    ],
+    "egress": [
+      {
+        "id": "0072d972-c9ec-4b3a-9a65-f533acd171eb",
+        "artifact_id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+        "binding": {
+          "artifact_id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+          "payload_hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc",
+          "roots": {
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e": 1
+          },
+          "destination": "mock://review",
+          "account": "demo",
+          "purpose": "competition-demo",
+          "policy_hash": "4ae0b8cfacc7c74209bb0388f0a105b9f2d7c2d7b379b0a26e44ed3c48dd03b6",
+          "policy_version": 1,
+          "approval_required": true,
+          "expires_at": 1791042249.0236561
+        },
+        "binding_hash": "194a5e14fc0e62cbf875658935b34fddb16d2c5b2bc5bbbd0d39748f9ba7b1ca",
+        "decision": "REQUIRE_APPROVAL",
+        "status": "MOCK_SENT",
+        "reason": null,
+        "expires_at": 1791042249.0236561,
+        "version": 3
+      }
+    ],
+    "jobs": [
+      {
+        "id": "57e759c4-cc0b-4388-8754-157386ee7434",
+        "event_id": "f8f543a0-3957-4bd4-9f65-de81f4e1c9c8",
+        "kind": "MODEL",
+        "entity_id": "2b7547fc-d7bf-4336-b098-f0c0a4e6523b",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "6d722122-11e9-44c5-87e3-1a8ec01ce801",
+        "lease_until": 1791041440.636215,
+        "created_at": 1791041420.5778904,
+        "result_hash": "5862fd691ba67ee5cf1572097fa6f1b98537a6ca4165a7e0e97ff0e2d6bb62d4"
+      },
+      {
+        "id": "163de205-dda6-4ac4-8cdb-2003e22a68b8",
+        "event_id": "40fd40f3-f652-4392-96c3-5ce94c522990",
+        "kind": "PLAN",
+        "entity_id": "e3e46cea-3323-4b3d-9436-5234283a6e10",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "d0a20265-fa70-4883-9bcb-165c9b589065",
+        "lease_until": 1791041615.2109225,
+        "created_at": 1791041594.7260275,
+        "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed"
+      },
+      {
+        "id": "9a27d669-2185-40c9-bc8b-fc92e237affb",
+        "event_id": "795dccdc-7923-4340-9f46-53a584d0e010",
+        "kind": "APPLY",
+        "entity_id": "ff65c9eb-8bd7-467e-9e89-a9d74d941c1e",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "b3db7a2a-e356-4b78-b20b-75b1188bb983",
+        "lease_until": 1791041770.3222172,
+        "created_at": 1791041749.928886,
+        "result_hash": "85c7f9ec9d88df13875cd3940247c145fe6d5b27b8ac0e213065961faaac20b1"
+      },
+      {
+        "id": "dc42194c-3fd5-4873-9b82-87a6ec862d8e",
+        "event_id": "cc669206-3ca6-44bf-9bf3-6042184b485d",
+        "kind": "EGRESS",
+        "entity_id": "0072d972-c9ec-4b3a-9a65-f533acd171eb",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "cbf4bf54-98c7-4106-b3e5-f00b280121f9",
+        "lease_until": 1791042086.424924,
+        "created_at": 1791042066.346083,
+        "result_hash": "b1e6f219ae7c2dc2c9bdeef220c7447fa84998493ab1575dd2fc7a0e4cae0003"
+      },
+      {
+        "id": "7f73a2de-1c01-4a24-800a-9ed7bede0f54",
+        "event_id": "4cc2e5d6-de05-4fa9-9f7f-a9b7e3d79218",
+        "kind": "PLAN",
+        "entity_id": "d760c70c-7d6f-49e9-a0ce-f9081e3f7af3",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "2dd7ad65-6b2e-4e51-88d7-11d87ba9a413",
+        "lease_until": 1791043091.165729,
+        "created_at": 1791043070.8502507,
+        "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed"
+      },
+      {
+        "id": "a474a8ff-fa46-4679-bdd0-1e1e9a64c65a",
+        "event_id": "7ce90338-c57a-433f-86c7-5dc46c33fb7f",
+        "kind": "APPLY",
+        "entity_id": "c37ff6c2-a605-4b6d-97fd-e4a15b9bde80",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "8af2e270-a23e-47ab-b2e6-36b8cc391ebe",
+        "lease_until": 1791043172.1557276,
+        "created_at": 1791043141.664342,
+        "result_hash": "6bac653e1b3517b5fd17020b1585fa5760149713a174bc75d085588701ee25b0"
+      },
+      {
+        "id": "ad21dbd8-d832-438b-bc1f-55755f6c541e",
+        "event_id": "a6bc1dff-0bd4-4d2e-9cc9-d894de30c391",
+        "kind": "MODEL",
+        "entity_id": "b74199b7-16ed-45ba-9c49-c2b3831f25a1",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "f115a4e3-f739-4de1-a1e0-4cba67b661b6",
+        "lease_until": 1791043372.004939,
+        "created_at": 1791043351.5593078,
+        "result_hash": "40ee867ab502e7827c46c5a507d517d06a9f58cb0edb1966acfe4fde357dd201"
+      },
+      {
+        "id": "e017273f-8ca3-4289-87c1-9e2be502c7e7",
+        "event_id": "3c5b0615-cfbf-41ce-85b6-58c336a151a0",
+        "kind": "REVOKE",
+        "entity_id": "f8cb290d-192d-4f67-b25b-4a0dcd4bdfec",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "65a7357e-2e73-46fa-aba3-73f23b8f5375",
+        "lease_until": 1791043383.3344169,
+        "created_at": 1791043362.8461432,
+        "result_hash": "7ccb67d757b10dd88849a30ceeb9ad080cf86747659887ac8cc1a17d27181213"
+      },
+      {
+        "id": "6d77df97-de41-4571-9c48-5d16a7e2febe",
+        "event_id": "eebcda7d-ccfd-49c7-b90f-fbffb0b50097",
+        "kind": "MODEL",
+        "entity_id": "da285ad4-1ae9-4e46-9eeb-bb7d0519bd48",
+        "state": "FAILED",
+        "fence": 1,
+        "attempt_id": "a877a37e-93bf-4f29-90f1-08d1937a5135",
+        "lease_until": 1791043470.4873152,
+        "created_at": 1791043450.1167552,
+        "result_hash": "cc48a63230e451cdb84d19659e084b3eaee67b7c371e76ae971810eefb51188c"
+      },
+      {
+        "id": "88fdac64-75f5-434e-9adf-bf123f50403f",
+        "event_id": "e1f8dcd9-650a-4218-b9c0-46dfa50178a7",
+        "kind": "REVOKE",
+        "entity_id": "42257abd-6cb6-4e2f-9b5a-3aa81517fc74",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "4ad67297-7166-4b69-b605-8e1a269de1e3",
+        "lease_until": 1791043476.0641882,
+        "created_at": 1791043452.2674675,
+        "result_hash": "7ccb67d757b10dd88849a30ceeb9ad080cf86747659887ac8cc1a17d27181213"
+      },
+      {
+        "id": "a00c25a7-1fb9-4397-b892-8eb5ac0058d9",
+        "event_id": "30b5aabc-398a-4264-9eeb-2a3653db7ae3",
+        "kind": "MODEL",
+        "entity_id": "e738c827-6ebf-472c-8c11-7ad9ce3c582b",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "07729bbe-2b29-409f-b569-0c723014eabe",
+        "lease_until": 1791043642.9544778,
+        "created_at": 1791043622.6838503,
+        "result_hash": "d906e52316f157cc37ea37cf981ed3547029674b323994a72ea656bce50a53cf"
+      },
+      {
+        "id": "102c415e-7078-485e-85a8-87ca8e483bc9",
+        "event_id": "7d3d6ce1-b741-4cca-a5ca-dc51f3a9fdee",
+        "kind": "PLAN",
+        "entity_id": "f0f4e66c-2387-45bf-8203-638c85d68949",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "6a7dd050-30dc-4e60-8c87-db7c4439eca2",
+        "lease_until": 1791045523.3718913,
+        "created_at": 1791045502.9688704,
+        "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed"
+      },
+      {
+        "id": "7622f13b-a0a8-4485-a57d-fe4ef321dd7d",
+        "event_id": "3fe6da6f-ca56-4bc8-8e9b-43d5b65b0919",
+        "kind": "APPLY",
+        "entity_id": "079e7a08-d12d-4f1d-a844-9c56f2ae055b",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "5cfb6909-480a-44d8-bcb5-d172ae43b845",
+        "lease_until": 1791045561.4959593,
+        "created_at": 1791045531.0457203,
+        "result_hash": "8fb2b4bf57114a6cccabdd5bc79604a72ee58e6530cdbe0e5bc9c1c94e15e949"
+      },
+      {
+        "id": "0875ec5f-be36-4bb7-a40c-a7edddc90baf",
+        "event_id": "b8cd6b38-a788-451a-8e12-2a73918f8c8e",
+        "kind": "PLAN",
+        "entity_id": "7de30ce7-1a28-4bd8-a9fd-0a32647618ec",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "7f98946a-601e-4567-a06e-fb118a92f418",
+        "lease_until": 1791045611.4376535,
+        "created_at": 1791045590.9240003,
+        "result_hash": "901f1e0dd22d812eb1221d9f486ff035a0cc823a9f86246836bbe161f5bf1321"
+      },
+      {
+        "id": "c5f41420-118d-461a-8ba2-982330963dd2",
+        "event_id": "432aa1a7-ca7f-4109-8fcd-351feacec563",
+        "kind": "APPLY",
+        "entity_id": "c1f58871-2649-40c0-b37c-2e51b1079ec7",
+        "state": "DONE",
+        "fence": 1,
+        "attempt_id": "5733e5a5-12b3-4afe-b9c5-9a41c8f83640",
+        "lease_until": 1791045650.6326478,
+        "created_at": 1791045620.2185924,
+        "result_hash": "e519cab3a70c1bc168106122761a4323ba7303008efa80145880bad85c7c5d23"
+      }
+    ],
+    "events": [
+      {
+        "id": "dfd2dbe2-55e4-4cce-adf2-2d3dcf21c867",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "roots",
+          "entity_id": "c690e7b8-1832-42fa-a908-34f3c965dc7e"
+        },
+        "at": 1791041420.1157753
+      },
+      {
+        "id": "143bfd57-679d-46f8-90fa-760e1d7d19dd",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "roots",
+          "entity_id": "ed63afaf-e86b-4b78-9063-7ac9fef0a242"
+        },
+        "at": 1791041420.192249
+      },
+      {
+        "id": "66fe380e-6530-4451-8936-6e9df557f97c",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "roots",
+          "entity_id": "620e4999-6871-4efe-b5c3-d77c4556a769"
+        },
+        "at": 1791041420.2418172
+      },
+      {
+        "id": "ba0ab9fc-88ad-4e2a-9faf-b572e0d22847",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "5d84d4e2-6785-4811-9076-3d1d6515767d",
+          "roots": [
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e"
+          ],
+          "payload_hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc",
+          "measured_quality": false
+        },
+        "at": 1791041420.3156965
+      },
+      {
+        "id": "8ce22ced-7825-42d0-8044-95e5a4331c84",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "9aa4d876-7dc0-43f6-b44f-1a0e8c70951c",
+          "roots": [
+            "ed63afaf-e86b-4b78-9063-7ac9fef0a242"
+          ],
+          "payload_hash": "70674cf0954c67d13665ec0d65b3aca939020d735e25fdba45d1113b9e8098ec",
+          "measured_quality": false
+        },
+        "at": 1791041420.373963
+      },
+      {
+        "id": "37e0695c-1144-4343-bb1a-4f2082475b20",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "becea97d-ef59-4ae3-b593-c417a82754b3",
+          "roots": [
+            "620e4999-6871-4efe-b5c3-d77c4556a769"
+          ],
+          "payload_hash": "1da5099f52ebff06bb2f3a8fe16f3558f9c0bc8268cb4ae3825505c4e3455b60",
+          "measured_quality": false
+        },
+        "at": 1791041420.4551795
+      },
+      {
+        "id": "49160af2-ac70-45b7-8b50-22a4ae4c1dc7",
+        "kind": "ARTIFACT_HELD",
+        "details": {
+          "artifact_id": "636d7b22-1186-42f9-951f-b2efbf197da7",
+          "roots": [],
+          "payload_hash": "0bc4a37b32ff50bdfb0aa5af71f2d87395073655291c029c9c5983683aa96cc6",
+          "measured_quality": false
+        },
+        "at": 1791041420.517901
+      },
+      {
+        "id": "dc5264e6-5376-426b-9fdd-95e6ccf8a7ff",
+        "kind": "MANIFEST_SEALED",
+        "details": {
+          "run_id": "2b7547fc-d7bf-4336-b098-f0c0a4e6523b",
+          "manifest_id": "32af1419-f632-438b-8dcf-b8c3b084ad9c",
+          "manifest_hash": "f7d6204591ab17c273f8e4970cf23651223a7d6be17d02d51b38c128cfc2dbc0"
+        },
+        "at": 1791041420.576849
+      },
+      {
+        "id": "667a0d6e-0b80-4f16-bf3b-9ef23c4f7ef0",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "57e759c4-cc0b-4388-8754-157386ee7434",
+          "job_kind": "MODEL",
+          "entity_id": "2b7547fc-d7bf-4336-b098-f0c0a4e6523b"
+        },
+        "at": 1791041420.5795133
+      },
+      {
+        "id": "ebbc9130-2aff-4ed3-b172-d0e4e036584b",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "57e759c4-cc0b-4388-8754-157386ee7434",
+          "attempt_id": "6d722122-11e9-44c5-87e3-1a8ec01ce801",
+          "fence": 1
+        },
+        "at": 1791041420.6406019
+      },
+      {
+        "id": "a384c4dc-79df-41d7-a3ae-a2c3f244c623",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "71ca8e02-b4d5-4599-b7cf-63f87913173d",
+          "roots": [
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e"
+          ],
+          "payload_hash": "6a45719f7feeddb8768aabd956923f77a503ab1e0b298546fdec5a3c8d328a78",
+          "measured_quality": false
+        },
+        "at": 1791041420.69569
+      },
+      {
+        "id": "c9bdd76c-3b4f-42ca-86eb-834820f2a9a8",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "57e759c4-cc0b-4388-8754-157386ee7434",
+          "job_kind": "MODEL",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "5862fd691ba67ee5cf1572097fa6f1b98537a6ca4165a7e0e97ff0e2d6bb62d4",
+          "fence": 1
+        },
+        "at": 1791041420.7005095
+      },
+      {
+        "id": "964b82b5-bf09-4cfe-b732-a2641ee3564e",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "devices",
+          "entity_id": "1c247cef-f44c-48d2-90e2-9e2802ba16f7"
+        },
+        "at": 1791041594.2965894
+      },
+      {
+        "id": "0cacccfe-b190-4eeb-a848-f24c19344eaa",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "3d9d6c87-7486-47e2-abbb-754e2cf11faa"
+        },
+        "at": 1791041594.3479478
+      },
+      {
+        "id": "09100377-89de-4371-b8ae-f42060b5526f",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "88b5840c-5b85-4d47-ae74-a516403b0ffa"
+        },
+        "at": 1791041594.408754
+      },
+      {
+        "id": "403cd9a8-254a-49b6-baf4-a3d55737b0f8",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "snapshots",
+          "entity_id": "47347c85-7bd6-4096-91c5-f8d755e4b2dd"
+        },
+        "at": 1791041594.5464432
+      },
+      {
+        "id": "425276b6-e720-4172-acea-32e37a81a5af",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "incidents",
+          "entity_id": "3b63c264-f9b6-4c97-957c-9aa3aaf916ca"
+        },
+        "at": 1791041594.6181438
+      },
+      {
+        "id": "29beb19f-3f93-4304-b3c3-e4900e1a0839",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "163de205-dda6-4ac4-8cdb-2003e22a68b8",
+          "job_kind": "PLAN",
+          "entity_id": "e3e46cea-3323-4b3d-9436-5234283a6e10"
+        },
+        "at": 1791041594.727085
+      },
+      {
+        "id": "acd6171a-bd7c-42eb-94b4-90c11541957f",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "163de205-dda6-4ac4-8cdb-2003e22a68b8",
+          "attempt_id": "d0a20265-fa70-4883-9bcb-165c9b589065",
+          "fence": 1
+        },
+        "at": 1791041595.2136292
+      },
+      {
+        "id": "2d28d848-2097-485c-88fe-4b607ced9532",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "163de205-dda6-4ac4-8cdb-2003e22a68b8",
+          "job_kind": "PLAN",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed",
+          "fence": 1
+        },
+        "at": 1791041595.7451103
+      },
+      {
+        "id": "c7154bc2-76aa-42ea-9b40-eb0f5b94f286",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "9a27d669-2185-40c9-bc8b-fc92e237affb",
+          "job_kind": "APPLY",
+          "entity_id": "ff65c9eb-8bd7-467e-9e89-a9d74d941c1e"
+        },
+        "at": 1791041749.9299595
+      },
+      {
+        "id": "932d2405-656f-4e92-ad3b-62346df326a5",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "9a27d669-2185-40c9-bc8b-fc92e237affb",
+          "attempt_id": "b3db7a2a-e356-4b78-b20b-75b1188bb983",
+          "fence": 1
+        },
+        "at": 1791041750.3242974
+      },
+      {
+        "id": "d7aaac27-15ca-4da0-9d9a-304ae95d83b1",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "9a27d669-2185-40c9-bc8b-fc92e237affb",
+          "job_kind": "APPLY",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "85c7f9ec9d88df13875cd3940247c145fe6d5b27b8ac0e213065961faaac20b1",
+          "fence": 1
+        },
+        "at": 1791041750.3726842
+      },
+      {
+        "id": "fdc22db1-2dbf-42a8-8fc7-dfdaad894ceb",
+        "kind": "DISCLOSURE_INSPECTED",
+        "details": {
+          "request_id": "0072d972-c9ec-4b3a-9a65-f533acd171eb",
+          "decision": "REQUIRE_APPROVAL",
+          "status": "REVIEW_REQUIRED",
+          "payload_hash": "9ab02b04d6bdfaf73662fa6b720406352bbae94e248bbe187d8a1fd0d0c0d1cc",
+          "roots": [
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e"
+          ]
+        },
+        "at": 1791041949.0283349
+      },
+      {
+        "id": "03bc3a4e-77f1-466c-af7e-1497bec43f61",
+        "kind": "EXACT_REQUEST_APPROVED",
+        "details": {
+          "request_id": "0072d972-c9ec-4b3a-9a65-f533acd171eb",
+          "binding_hash": "194a5e14fc0e62cbf875658935b34fddb16d2c5b2bc5bbbd0d39748f9ba7b1ca"
+        },
+        "at": 1791041960.2618573
+      },
+      {
+        "id": "f2bb57e2-f2cb-4cb1-94b1-2565d5f7c15e",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "dc42194c-3fd5-4873-9b82-87a6ec862d8e",
+          "job_kind": "EGRESS",
+          "entity_id": "0072d972-c9ec-4b3a-9a65-f533acd171eb"
+        },
+        "at": 1791042066.3479066
+      },
+      {
+        "id": "b85da393-b024-4c62-8686-32626572a895",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "dc42194c-3fd5-4873-9b82-87a6ec862d8e",
+          "attempt_id": "cbf4bf54-98c7-4106-b3e5-f00b280121f9",
+          "fence": 1
+        },
+        "at": 1791042066.429615
+      },
+      {
+        "id": "ae099349-2638-429e-96d9-b5fb4b8967a5",
+        "kind": "DISPATCH_ADMITTED",
+        "details": {
+          "request_id": "0072d972-c9ec-4b3a-9a65-f533acd171eb",
+          "binding_hash": "194a5e14fc0e62cbf875658935b34fddb16d2c5b2bc5bbbd0d39748f9ba7b1ca"
+        },
+        "at": 1791042066.45835
+      },
+      {
+        "id": "7560b012-ae76-4000-a6c7-6508c2bd418f",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "dc42194c-3fd5-4873-9b82-87a6ec862d8e",
+          "job_kind": "EGRESS",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "b1e6f219ae7c2dc2c9bdeef220c7447fa84998493ab1575dd2fc7a0e4cae0003",
+          "fence": 1
+        },
+        "at": 1791042066.4889424
+      },
+      {
+        "id": "cf658f52-dfb9-4329-b1b9-afc6afb6f5d0",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "devices",
+          "entity_id": "4f8c5a48-c5ed-42d7-be4d-2dbb5067b9e9"
+        },
+        "at": 1791043070.423417
+      },
+      {
+        "id": "f042f135-6e27-45db-b90a-22c9f17041c6",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "c5bd1479-b25d-4a92-8954-00bb86417614"
+        },
+        "at": 1791043070.4991848
+      },
+      {
+        "id": "9b758667-f2fd-40b6-b413-9694ea13d5c7",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "c43710e8-7224-4339-84ed-d4d8c5e18a89"
+        },
+        "at": 1791043070.5978754
+      },
+      {
+        "id": "0cab0b80-d2f9-4f9f-89c1-9c30b90c2b99",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "snapshots",
+          "entity_id": "4c37b560-04ed-410f-b53c-4b619315180a"
+        },
+        "at": 1791043070.6703937
+      },
+      {
+        "id": "413a5444-2530-4981-badf-4e60863491f0",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "incidents",
+          "entity_id": "6c98f99e-6e7f-45b5-982f-ac5922448e92"
+        },
+        "at": 1791043070.7518635
+      },
+      {
+        "id": "f4d8092b-7ecd-47da-9106-184ff32c8f4d",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "7f73a2de-1c01-4a24-800a-9ed7bede0f54",
+          "job_kind": "PLAN",
+          "entity_id": "d760c70c-7d6f-49e9-a0ce-f9081e3f7af3"
+        },
+        "at": 1791043070.8519735
+      },
+      {
+        "id": "e0458a23-e394-4d68-8f25-cd3a252b0cbb",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "7f73a2de-1c01-4a24-800a-9ed7bede0f54",
+          "attempt_id": "2dd7ad65-6b2e-4e51-88d7-11d87ba9a413",
+          "fence": 1
+        },
+        "at": 1791043071.1699507
+      },
+      {
+        "id": "a456260a-11d2-4855-adca-e5090cca8c73",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "7f73a2de-1c01-4a24-800a-9ed7bede0f54",
+          "job_kind": "PLAN",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed",
+          "fence": 1
+        },
+        "at": 1791043071.7462478
+      },
+      {
+        "id": "1e9931bd-7a11-4b1b-ab99-c82ea16751ce",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "a474a8ff-fa46-4679-bdd0-1e1e9a64c65a",
+          "job_kind": "APPLY",
+          "entity_id": "c37ff6c2-a605-4b6d-97fd-e4a15b9bde80"
+        },
+        "at": 1791043141.665422
+      },
+      {
+        "id": "69e9599b-a1a4-4df1-b448-75d17a254844",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "a474a8ff-fa46-4679-bdd0-1e1e9a64c65a",
+          "attempt_id": "8af2e270-a23e-47ab-b2e6-36b8cc391ebe",
+          "fence": 1
+        },
+        "at": 1791043142.0668318
+      },
+      {
+        "id": "3a874ffc-8b57-42f1-a8a6-795e941805e2",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "a474a8ff-fa46-4679-bdd0-1e1e9a64c65a",
+          "job_kind": "APPLY",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "6bac653e1b3517b5fd17020b1585fa5760149713a174bc75d085588701ee25b0",
+          "fence": 1
+        },
+        "at": 1791043156.3973448
+      },
+      {
+        "id": "1768bfc3-e46d-4d9a-9c1e-e4cfdcb46868",
+        "kind": "MANIFEST_SEALED",
+        "details": {
+          "run_id": "b74199b7-16ed-45ba-9c49-c2b3831f25a1",
+          "manifest_id": "8b48c4a9-db93-4969-92d4-a0cefc239672",
+          "manifest_hash": "2ca4a279f7a09a07310fe137c511bd063e30b037447c064388e6e04ad45c9ba2"
+        },
+        "at": 1791043351.5582228
+      },
+      {
+        "id": "93215c86-fd52-4bcc-ad99-ae0ae7bce082",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "ad21dbd8-d832-438b-bc1f-55755f6c541e",
+          "job_kind": "MODEL",
+          "entity_id": "b74199b7-16ed-45ba-9c49-c2b3831f25a1"
+        },
+        "at": 1791043351.5603979
+      },
+      {
+        "id": "f7ca4e8b-659f-4f07-b6d6-c8d2b74c68f5",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "ad21dbd8-d832-438b-bc1f-55755f6c541e",
+          "attempt_id": "f115a4e3-f739-4de1-a1e0-4cba67b661b6",
+          "fence": 1
+        },
+        "at": 1791043352.0175824
+      },
+      {
+        "id": "d2f6c552-b26e-465f-84aa-aa584231c70a",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "9e4a3ce1-96a3-479d-8485-890a2c0a13f5",
+          "roots": [
+            "c690e7b8-1832-42fa-a908-34f3c965dc7e"
+          ],
+          "payload_hash": "6a45719f7feeddb8768aabd956923f77a503ab1e0b298546fdec5a3c8d328a78",
+          "measured_quality": false
+        },
+        "at": 1791043357.142532
+      },
+      {
+        "id": "f724f4d3-1e8a-4a9e-b447-63c148ce6df7",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "ad21dbd8-d832-438b-bc1f-55755f6c541e",
+          "job_kind": "MODEL",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "40ee867ab502e7827c46c5a507d517d06a9f58cb0edb1966acfe4fde357dd201",
+          "fence": 1
+        },
+        "at": 1791043357.1486003
+      },
+      {
+        "id": "2fdd5208-3e0b-4e05-a32b-37893aaa4e8b",
+        "kind": "ROOT_REVOKED",
+        "details": {
+          "root_id": "c690e7b8-1832-42fa-a908-34f3c965dc7e",
+          "barrier_version": 2,
+          "proven": [
+            "5d84d4e2-6785-4811-9076-3d1d6515767d",
+            "71ca8e02-b4d5-4599-b7cf-63f87913173d",
+            "9e4a3ce1-96a3-479d-8485-890a2c0a13f5"
+          ],
+          "precaution": [
+            "636d7b22-1186-42f9-951f-b2efbf197da7"
+          ]
+        },
+        "at": 1791043362.8440673
+      },
+      {
+        "id": "c7939ef3-3a21-4742-afe2-aecffec4e399",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "e017273f-8ca3-4289-87c1-9e2be502c7e7",
+          "job_kind": "REVOKE",
+          "entity_id": "f8cb290d-192d-4f67-b25b-4a0dcd4bdfec"
+        },
+        "at": 1791043362.8473146
+      },
+      {
+        "id": "59f45d8f-f559-457e-8b00-f8ede5ce595e",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "e017273f-8ca3-4289-87c1-9e2be502c7e7",
+          "attempt_id": "65a7357e-2e73-46fa-aba3-73f23b8f5375",
+          "fence": 1
+        },
+        "at": 1791043363.3371189
+      },
+      {
+        "id": "f9eca7e5-4fec-43be-bc2d-2df0ca397874",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "e017273f-8ca3-4289-87c1-9e2be502c7e7",
+          "job_kind": "REVOKE",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "7ccb67d757b10dd88849a30ceeb9ad080cf86747659887ac8cc1a17d27181213",
+          "fence": 1
+        },
+        "at": 1791043363.3937285
+      },
+      {
+        "id": "c253fdbf-8dac-4ddc-8d2e-f88bc3b3060e",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "roots",
+          "entity_id": "e651b678-23b2-4b0c-a6f7-55532cbccc10"
+        },
+        "at": 1791043407.3636634
+      },
+      {
+        "id": "60df1474-f6a9-4be0-beea-58ff9b66216c",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "0dee189d-de02-49a1-929a-3343c790d57e",
+          "roots": [
+            "e651b678-23b2-4b0c-a6f7-55532cbccc10"
+          ],
+          "payload_hash": "ada3b63c17687d6605108cb07a8dcd5af71b803827bdfd691d4dc74facefc5d6",
+          "measured_quality": false
+        },
+        "at": 1791043407.440686
+      },
+      {
+        "id": "241ec663-cbe3-4661-9ea9-2512af6a8d3d",
+        "kind": "MANIFEST_SEALED",
+        "details": {
+          "run_id": "da285ad4-1ae9-4e46-9eeb-bb7d0519bd48",
+          "manifest_id": "88891d8a-6421-4897-9a7e-e94a757223f0",
+          "manifest_hash": "0f19de09efae93cc4aef9a66aa027153a847f3024d73ac1e9a4e508e5f7e4428"
+        },
+        "at": 1791043450.1151106
+      },
+      {
+        "id": "7e9b3c55-daa1-4743-b2b6-94c47adaf72b",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "6d77df97-de41-4571-9c48-5d16a7e2febe",
+          "job_kind": "MODEL",
+          "entity_id": "da285ad4-1ae9-4e46-9eeb-bb7d0519bd48"
+        },
+        "at": 1791043450.1177974
+      },
+      {
+        "id": "ea53fea2-485b-4d9f-b295-f04540bcccf0",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "6d77df97-de41-4571-9c48-5d16a7e2febe",
+          "attempt_id": "a877a37e-93bf-4f29-90f1-08d1937a5135",
+          "fence": 1
+        },
+        "at": 1791043450.4907796
+      },
+      {
+        "id": "1e124978-99c9-49b6-8731-bde33ea2f7ae",
+        "kind": "ROOT_REVOKED",
+        "details": {
+          "root_id": "e651b678-23b2-4b0c-a6f7-55532cbccc10",
+          "barrier_version": 2,
+          "proven": [
+            "0dee189d-de02-49a1-929a-3343c790d57e"
+          ],
+          "precaution": [
+            "636d7b22-1186-42f9-951f-b2efbf197da7"
+          ]
+        },
+        "at": 1791043452.266437
+      },
+      {
+        "id": "53dc3678-eff0-4380-a3d6-bfc4763e8ee1",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "88fdac64-75f5-434e-9adf-bf123f50403f",
+          "job_kind": "REVOKE",
+          "entity_id": "42257abd-6cb6-4e2f-9b5a-3aa81517fc74"
+        },
+        "at": 1791043452.2690463
+      },
+      {
+        "id": "c25d152f-69be-4d4f-b537-909636c61593",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "6d77df97-de41-4571-9c48-5d16a7e2febe",
+          "job_kind": "MODEL",
+          "status": "FAILED",
+          "reason": "ROOT_REVOKED",
+          "result_hash": "cc48a63230e451cdb84d19659e084b3eaee67b7c371e76ae971810eefb51188c",
+          "fence": 1
+        },
+        "at": 1791043455.5485797
+      },
+      {
+        "id": "6453706a-63eb-4c05-a5e6-90d1a42f6251",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "88fdac64-75f5-434e-9adf-bf123f50403f",
+          "attempt_id": "4ad67297-7166-4b69-b605-8e1a269de1e3",
+          "fence": 1
+        },
+        "at": 1791043456.0667367
+      },
+      {
+        "id": "d8865cd1-8f97-4f3b-8ba1-b71b5e879ba4",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "88fdac64-75f5-434e-9adf-bf123f50403f",
+          "job_kind": "REVOKE",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "7ccb67d757b10dd88849a30ceeb9ad080cf86747659887ac8cc1a17d27181213",
+          "fence": 1
+        },
+        "at": 1791043456.11959
+      },
+      {
+        "id": "fe263d9a-d165-4323-b84d-d77601b630a6",
+        "kind": "MANIFEST_SEALED",
+        "details": {
+          "run_id": "e738c827-6ebf-472c-8c11-7ad9ce3c582b",
+          "manifest_id": "8a329104-15f8-4e38-bdc5-c1e13907690a",
+          "manifest_hash": "8338ceed0b66f07e84493ebd293a43a519499485cd44a8fc52d59906bc782747"
+        },
+        "at": 1791043622.6827667
+      },
+      {
+        "id": "fb2f7cf4-2fac-41a8-9314-bb8db5dc72c2",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "a00c25a7-1fb9-4397-b892-8eb5ac0058d9",
+          "job_kind": "MODEL",
+          "entity_id": "e738c827-6ebf-472c-8c11-7ad9ce3c582b"
+        },
+        "at": 1791043622.6849122
+      },
+      {
+        "id": "c9652c38-c2eb-4178-9b85-d313abe7eb65",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "a00c25a7-1fb9-4397-b892-8eb5ac0058d9",
+          "attempt_id": "07729bbe-2b29-409f-b569-0c723014eabe",
+          "fence": 1
+        },
+        "at": 1791043622.9571652
+      },
+      {
+        "id": "df2f695c-32a4-48d2-9883-a4f5b5855ec9",
+        "kind": "ARTIFACT_PROMOTED",
+        "details": {
+          "artifact_id": "52720bef-f946-4741-9912-76f8d7dca4d6",
+          "roots": [
+            "ed63afaf-e86b-4b78-9063-7ac9fef0a242"
+          ],
+          "payload_hash": "ecae75ab7371a7c2d7b13fe9618c056bd568815fa2c1305817aa3a35732a2e3e",
+          "measured_quality": false
+        },
+        "at": 1791043623.0596979
+      },
+      {
+        "id": "51fe6e8d-d4b9-4ea7-befa-762499321e8e",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "a00c25a7-1fb9-4397-b892-8eb5ac0058d9",
+          "job_kind": "MODEL",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "d906e52316f157cc37ea37cf981ed3547029674b323994a72ea656bce50a53cf",
+          "fence": 1
+        },
+        "at": 1791043623.064566
+      },
+      {
+        "id": "ba6938d0-7608-4352-87f7-fd88e42422eb",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "devices",
+          "entity_id": "0bf12ae7-6a6a-4a9d-96d3-d9072170ed8f"
+        },
+        "at": 1791045502.3930297
+      },
+      {
+        "id": "dbdefeec-2aaf-452c-a704-f722f98f306a",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "7ffbb7f8-865e-4f68-9b85-122e494a646d"
+        },
+        "at": 1791045502.5201974
+      },
+      {
+        "id": "e28f43d4-ada5-4bf8-8180-ecfacb7a0957",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "58486209-3737-4c53-bd27-8af17214b585"
+        },
+        "at": 1791045502.6052282
+      },
+      {
+        "id": "7f481895-6049-497e-8d5c-39abe106bdd8",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "snapshots",
+          "entity_id": "d0e39d74-0428-4f81-b314-a91514088e13"
+        },
+        "at": 1791045502.775498
+      },
+      {
+        "id": "abefb87c-7086-4e76-9686-45b7237b8095",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "incidents",
+          "entity_id": "ff4ba521-d123-4dc1-8fd3-d04a67de1904"
+        },
+        "at": 1791045502.8801584
+      },
+      {
+        "id": "61cccdeb-78c0-424b-bbfd-6b42fe24663d",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "102c415e-7078-485e-85a8-87ca8e483bc9",
+          "job_kind": "PLAN",
+          "entity_id": "f0f4e66c-2387-45bf-8203-638c85d68949"
+        },
+        "at": 1791045502.9710574
+      },
+      {
+        "id": "f99e1f99-9889-4e5e-b427-341f042a58c6",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "102c415e-7078-485e-85a8-87ca8e483bc9",
+          "attempt_id": "6a7dd050-30dc-4e60-8c87-db7c4439eca2",
+          "fence": 1
+        },
+        "at": 1791045503.376194
+      },
+      {
+        "id": "ffa91848-c88a-4101-acbf-904e41686fa1",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "102c415e-7078-485e-85a8-87ca8e483bc9",
+          "job_kind": "PLAN",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "304ecf18e7aeb01f8d27f0f318f44a137ae6d6bbdeeb2469ca629a18e4ce77ed",
+          "fence": 1
+        },
+        "at": 1791045503.890821
+      },
+      {
+        "id": "51063960-3f18-474b-aad0-bc4c31ef4699",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "7622f13b-a0a8-4485-a57d-fe4ef321dd7d",
+          "job_kind": "APPLY",
+          "entity_id": "079e7a08-d12d-4f1d-a844-9c56f2ae055b"
+        },
+        "at": 1791045531.0467875
+      },
+      {
+        "id": "996a7f60-b091-4c5b-9a29-83b3a92502da",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "7622f13b-a0a8-4485-a57d-fe4ef321dd7d",
+          "attempt_id": "5cfb6909-480a-44d8-bcb5-d172ae43b845",
+          "fence": 1
+        },
+        "at": 1791045531.4005127
+      },
+      {
+        "id": "ef82fde4-b148-4c67-831d-42b3ba020716",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "7622f13b-a0a8-4485-a57d-fe4ef321dd7d",
+          "job_kind": "APPLY",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "8fb2b4bf57114a6cccabdd5bc79604a72ee58e6530cdbe0e5bc9c1c94e15e949",
+          "fence": 1
+        },
+        "at": 1791045545.5790045
+      },
+      {
+        "id": "8b498793-2f57-4cf1-8ffe-35fe34ad4138",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "devices",
+          "entity_id": "cfcb0a7e-f435-4142-b6ab-4b5ae1f5659d"
+        },
+        "at": 1791045590.3619878
+      },
+      {
+        "id": "b68326e2-dfc7-4b88-83db-bd5ae3c6d768",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "3267bce4-c64a-4bba-92d8-d8edd35a4d7d"
+        },
+        "at": 1791045590.4793637
+      },
+      {
+        "id": "549a18c5-5c9b-4ab4-8e57-c6f95d287074",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "contracts",
+          "entity_id": "d5425523-7f98-4c22-9629-7f155929c487"
+        },
+        "at": 1791045590.5847871
+      },
+      {
+        "id": "cab0c774-beef-49ec-96ee-bd33580ea5aa",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "snapshots",
+          "entity_id": "8c828dd5-742f-48dc-9f90-f871aef1af17"
+        },
+        "at": 1791045590.740332
+      },
+      {
+        "id": "31e3eb86-84c8-4548-8d5b-487f27a2365b",
+        "kind": "RECORD_CREATED",
+        "details": {
+          "record_kind": "incidents",
+          "entity_id": "3340d0b3-e617-4528-a26a-8edee0804e93"
+        },
+        "at": 1791045590.8328805
+      },
+      {
+        "id": "5f32127a-6511-4182-b5f5-f433d0c6719d",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "0875ec5f-be36-4bb7-a40c-a7edddc90baf",
+          "job_kind": "PLAN",
+          "entity_id": "7de30ce7-1a28-4bd8-a9fd-0a32647618ec"
+        },
+        "at": 1791045590.9250484
+      },
+      {
+        "id": "147c5806-5ae5-4ddb-b733-f4dcb14de126",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "0875ec5f-be36-4bb7-a40c-a7edddc90baf",
+          "attempt_id": "7f98946a-601e-4567-a06e-fb118a92f418",
+          "fence": 1
+        },
+        "at": 1791045591.4441724
+      },
+      {
+        "id": "fd2beba7-5d10-42ce-a1bf-324b9d5b0b99",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "0875ec5f-be36-4bb7-a40c-a7edddc90baf",
+          "job_kind": "PLAN",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "901f1e0dd22d812eb1221d9f486ff035a0cc823a9f86246836bbe161f5bf1321",
+          "fence": 1
+        },
+        "at": 1791045591.9991229
+      },
+      {
+        "id": "ffe49c0b-ad5e-497e-9c05-d5eaa32ab6c1",
+        "kind": "JOB_QUEUED",
+        "details": {
+          "job_id": "c5f41420-118d-461a-8ba2-982330963dd2",
+          "job_kind": "APPLY",
+          "entity_id": "c1f58871-2649-40c0-b37c-2e51b1079ec7"
+        },
+        "at": 1791045620.2197754
+      },
+      {
+        "id": "62fe3ff5-45fc-4a16-88e9-ff08f011b731",
+        "kind": "JOB_CLAIMED",
+        "details": {
+          "job_id": "c5f41420-118d-461a-8ba2-982330963dd2",
+          "attempt_id": "5733e5a5-12b3-4afe-b9c5-9a41c8f83640",
+          "fence": 1
+        },
+        "at": 1791045620.5009024
+      },
+      {
+        "id": "aba4ecc5-23b1-468c-a6e3-2621b2ccf6fe",
+        "kind": "JOB_COMPLETED",
+        "details": {
+          "job_id": "c5f41420-118d-461a-8ba2-982330963dd2",
+          "job_kind": "APPLY",
+          "status": "DONE",
+          "reason": null,
+          "result_hash": "e519cab3a70c1bc168106122761a4323ba7303008efa80145880bad85c7c5d23",
+          "fence": 1
+        },
+        "at": 1791045634.2034867
+      }
+    ]
+  }
+}

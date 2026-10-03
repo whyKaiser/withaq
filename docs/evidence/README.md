@@ -13,4 +13,6 @@ All committed input values are synthetic. Read the mode, source commit, recordin
 
 `LAB_CONFIRMED` means a completed ephemeral packet trial on synthetic endpoints. The raw signed receipt is bound to its candidate and snapshot hashes. It does not describe ongoing protection of a real facility. `MOCK_SENT` does not transmit bytes to an external AI service. The comparison is **model-only**, not 300 field experiments.
 
+The fresh benchmark, standalone packet and restore bundles were regenerated from clean source commit `c70d693fad024a08bdeb3018b7e22c9d47ffbc1a`. The system bundle retains earlier session history: its export commit does not establish a source commit for every historical job. After that source commit and service restart, the console executed fresh `separable` (`a+b`, cost 2) and `bounded-dependency` (`a+d`, cost 3) plans. Both returned `LAB_CONFIRMED`, with every declared critical function measured PASS. Their exact IDs and verification provenance are in `verification-v0.2.json`.
+
 For reproducing the bundles, run the scripts in README. Defaults write into ignored `artifacts/`; publication is a deliberate selection step so private runtime data does not enter Git automatically.

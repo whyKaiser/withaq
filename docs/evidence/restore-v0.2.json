@@ -1,0 +1,18 @@
+{
+  "mode": "postgresql-old-backup-plus-newer-authenticated-ledger",
+  "recorded_at": "2026-10-03T16:37:52.194516+00:00",
+  "code_commit": "c70d693fad024a08bdeb3018b7e22c9d47ffbc1a",
+  "working_tree_dirty": false,
+  "synthetic_only": true,
+  "checks": {
+    "old_snapshot_root_was_active": true,
+    "tampered_ledger_rejected": true,
+    "newer_barrier_restored_before_resume": true,
+    "old_artifact_read_denied": true,
+    "restored_pending_run_guarded": true,
+    "pending_outbox_preserved": true,
+    "migration_head_restored": true
+  },
+  "dump_bytes": 35887,
+  "limits": "Operator-selected latest trusted ledger; no automatic off-host ledger replication or freshness authority."
+}

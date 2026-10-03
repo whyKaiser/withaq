@@ -1,0 +1,81 @@
+{
+  "release": "0.2.0",
+  "recorded_at": "2026-10-03T16:41:52.575786+00:00",
+  "source_commit": "c70d693fad024a08bdeb3018b7e22c9d47ffbc1a",
+  "synthetic_data_only": true,
+  "scope": "Windows engineering lab; actual ephemeral Linux-container TCP/nftables trials; content and external dispatch mock.",
+  "runtimes": {
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "node": "25.6.0",
+    "npm": "11.8.0",
+    "docker_engine": "29.7.2",
+    "postgresql": "17.11"
+  },
+  "checks": [
+    {
+      "command": "python scripts/verify_postgres.py",
+      "passed": 78,
+      "warnings": 1,
+      "seconds": 30.59,
+      "provenance": "Executed before the source commit on its same final code contents. Upstream Starlette TestClient/httpx deprecation warning."
+    },
+    {
+      "command": "npm --prefix apps/console run build",
+      "exit_code": 0,
+      "provenance": "Executed before the source commit on its same final frontend contents; TypeScript and Vite build passed."
+    },
+    {
+      "command": "python -m pip check",
+      "exit_code": 0,
+      "result": "No broken requirements found."
+    },
+    {
+      "command": "python scripts/benchmark.py",
+      "count": 300,
+      "mode": "model-only",
+      "clean_source": true
+    },
+    {
+      "command": "python scripts/packet_lab.py",
+      "passed": 8,
+      "clean_source": true
+    },
+    {
+      "command": "python scripts/restore_qualification.py",
+      "passed": 7,
+      "clean_source": true
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0
+    }
+  ],
+  "browser_observations": {
+    "earlier_session": [
+      "PostgreSQL general workflow",
+      "MOCK_SENT after exact approval",
+      "Revocation after publication",
+      "Revocation during leased delayed job: ROOT_REVOKED then REJECTED",
+      "Independent new-identity recovery with S2; S1 remains revoked"
+    ],
+    "after_source_commit_and_service_restart": [
+      "separable plan a+b cost 2: LAB_CONFIRMED, both critical contracts measured PASS",
+      "bounded-dependency plan a+d cost 3: LAB_CONFIRMED, every declared critical contract measured PASS"
+    ],
+    "provenance": "System export commit identifies export source, not every historical job execution. State retains earlier working-session jobs. Fresh plan IDs f0f4e66c-2387-45bf-8203-638c85d68949 and 7de30ce7-1a28-4bd8-a9fd-0a32647618ec were executed after the recorded source commit and service restart."
+  },
+  "ci": {
+    "active": false,
+    "reason": "GitHub OAuth connection lacks workflow scope; configuration is docs/ci/github-actions.yml."
+  },
+  "remaining": [
+    "Independent teammate reproduction and human review",
+    "Physical devices and wider topologies",
+    "Institutional identity/TLS and deployment egress isolation",
+    "Real AI provider and semantic recovery quality",
+    "General AND/OR dependency management and source attribution windows",
+    "Persistent PEP reconciliation/controller failure drill",
+    "Off-host ledger replication and trusted freshness authority",
+    "Automated browser suite and public runtime hosting"
+  ]
+}
