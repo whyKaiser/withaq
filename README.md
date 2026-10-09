@@ -186,7 +186,31 @@ flowchart LR
     Gateway --> Provider["Mock AI provider"]
 ```
 
-Device traffic crosses the network enforcement point, reads and publication cross the API's root guards, and anything leaving for an AI provider crosses the disclosure gateway. The three share incident and policy versions but keep separate evidence. Stack: Python, FastAPI, SQLAlchemy and Alembic on PostgreSQL (SQLite fallback); React, TypeScript and Vite for the console; nftables and Linux namespaces in Docker for the lab.
+Device traffic crosses the network enforcement point, reads and publication cross the API's root guards, and anything leaving for an AI provider crosses the disclosure gateway. The three share incident and policy versions but keep separate evidence.
+
+## Technology stack
+
+WITHAQ uses a Python backend, a TypeScript web console, and an isolated Linux-based lab for validating enforcement behavior.
+
+| Area | Technologies | Purpose |
+|---|---|---|
+| Backend API and services | **Python, FastAPI** | Exposes the API and coordinates system services and security workflows. |
+| Data access and schema migrations | **SQLAlchemy, Alembic** | Database models, persistence, and versioned schema migrations. |
+| Primary database | **PostgreSQL** | Authoritative state, versions, roles, idempotency keys, and transactional revocation events. |
+| Lightweight local mode | **SQLite** | Fallback for running the lab without Docker; packet enforcement is simulated in this mode. |
+| Web console | **React, TypeScript, Vite** | Arabic/English operator interface and frontend build tooling. |
+| Containerized lab | **Docker** | Isolates the packet-enforcement experiment from the host environment. |
+| Network enforcement | **Linux network namespaces, nftables** | Provides an isolated network environment and applies/measures packet-filtering rules in the local lab. |
+| Testing and verification | **pytest, project verification scripts, npm build** | Tests backend behavior, verifies database and recovery properties, checks packet trials, runs benchmarks, and builds the console. |
+| AI disclosure testing | **Disclosure gateway, local mock AI provider** | Checks requests before dispatch; the mock provider is used for controlled tests, so no request bytes are sent to an external AI provider. |
+
+### Runtime modes
+
+- **Full local lab:** PostgreSQL plus Docker-based packet enforcement and measured `nftables` rules.
+- **Without Docker:** SQLite with simulated enforcement; real packet-lab measurements are unavailable.
+- **Public browser demo:** Synthetic data and simulated enforcement. It does not perform the local lab's real packet measurements.
+
+The mock AI provider is a test component, not a production LLM integration.
 
 
 ## Documentation
